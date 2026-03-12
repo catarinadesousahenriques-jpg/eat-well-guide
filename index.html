@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eat Well · Budget & On the Go · Catarina De Sousa Henriques</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Jost:wght@200;300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#0f1f13;--forest-2:#182d1e;--forest-3:#1e3825;--green:#4daa5e;--green-soft:#6dc47c;--green-pale:#b8ddbf;--cream:#f4edda;--cream-2:#ede3c5;--sand:#c9a057;--sand-soft:#dbb878;--terracotta:#c4603a;--text-dim:rgba(244,237,218,0.5);--text-mid:rgba(244,237,218,0.75);--border:rgba(77,170,94,0.15);--border-h:rgba(77,170,94,0.4);--card:#182d1e;--card-2:#1a3020}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--forest);color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px 100px;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 40%,#1a3824 0%,var(--forest) 70%)}
+.ring{position:absolute;border-radius:50%;border:1px solid;pointer-events:none;top:50%;left:50%}
+.r1{width:700px;height:700px;border-color:rgba(77,170,94,.07);transform:translate(-50%,-50%);animation:breathe 8s ease-in-out infinite}
+.r2{width:480px;height:480px;border-color:rgba(77,170,94,.11);transform:translate(-50%,-50%);animation:breathe 8s ease-in-out infinite .8s}
+.r3{width:280px;height:280px;border-color:rgba(77,170,94,.18);transform:translate(-50%,-50%);animation:breathe 8s ease-in-out infinite 1.6s}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.7}50%{transform:translate(-50%,-50%) scale(1.07);opacity:.2}}
+.ey{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.3em;color:var(--green);text-transform:uppercase;margin-bottom:28px;opacity:0;animation:up .9s ease forwards .2s}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(54px,12vw,104px);line-height:.92;color:var(--cream);opacity:0;animation:up .9s ease forwards .4s}
+.hero h1 em{font-style:italic;color:var(--green-soft)}
+.h-sub-title{font-family:'Playfair Display',serif;font-size:clamp(34px,8vw,70px);line-height:.95;color:var(--sand);font-style:italic;margin:8px 0 28px;opacity:0;animation:up .9s ease forwards .55s}
+.h-desc{font-size:clamp(14px,3vw,17px);color:var(--text-mid);max-width:480px;line-height:1.75;margin-bottom:44px;opacity:0;animation:up .9s ease forwards .7s}
+.pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:60px;opacity:0;animation:up .9s ease forwards .85s}
+.pill{background:rgba(77,170,94,.1);border:1px solid rgba(77,170,94,.25);border-radius:100px;padding:9px 20px;font-family:'DM Mono',monospace;font-size:12px;color:var(--green-pale);letter-spacing:.06em}
+.scroll-hint{opacity:0;animation:up .9s ease forwards 1.1s;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint span{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(244,237,218,.3)}
+.sbar{width:1px;height:44px;background:linear-gradient(to bottom,var(--green),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.3;transform:scaleY(.5)}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:rgba(15,31,19,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-i{display:flex;overflow-x:auto;scrollbar-width:none;max-width:960px;margin:0 auto}
+.nav-i::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:16px 20px;background:none;border:none;border-bottom:2px solid transparent;color:rgba(244,237,218,.45);font-family:'Jost',sans-serif;font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.05em;transition:all .2s;white-space:nowrap}
+.tab:hover{color:var(--cream)}.tab.on{color:var(--green);border-bottom-color:var(--green)}
+
+/* SECTIONS */
+.sec{display:none;max-width:880px;margin:0 auto;padding:64px 24px 80px;animation:up .4s ease}
+.sec.on{display:block}
+.eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.28em;color:var(--green);text-transform:uppercase;margin-bottom:14px}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(30px,6vw,50px);line-height:1.05;color:var(--cream);margin-bottom:16px}
+.sec-title em{font-style:italic;color:var(--sand-soft)}
+.intro{font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:44px;padding-left:18px;border-left:2px solid var(--green);max-width:640px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--border-h);transform:translateY(-2px)}
+
+/* POWER FOODS */
+.pgrid{display:flex;flex-direction:column;gap:14px}
+.pcard{display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:start;padding:22px 24px}
+.pnum{font-family:'Playfair Display',serif;font-size:38px;color:rgba(77,170,94,.2);line-height:1;padding-top:2px}
+.pb h3{font-weight:600;font-size:16px;color:var(--cream);margin-bottom:5px}
+.pb p{font-size:14.5px;color:var(--text-mid);line-height:1.7}
+.pb .why{margin-top:8px;font-size:13.5px;color:var(--green-soft);font-style:italic}
+.pcost{font-family:'DM Mono',monospace;font-size:12px;color:var(--forest);background:var(--green);padding:5px 12px;border-radius:6px;white-space:nowrap;flex-shrink:0;height:fit-content}
+@media(max-width:560px){.pcard{grid-template-columns:32px 1fr;gap:12px}.pcost{grid-column:2;justify-self:start}}
+
+.tips-box{margin-top:36px;background:var(--forest-3);border:1px solid var(--border);border-radius:14px;padding:28px}
+.tips-box h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--sand-soft);margin-bottom:18px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.tgrid{grid-template-columns:1fr}}
+.ti{background:var(--forest-2);border-radius:10px;padding:14px 16px;font-size:14px;color:var(--text-mid);line-height:1.65}
+.ti strong{font-family:'DM Mono',monospace;font-size:11px;color:var(--green-soft);display:block;margin-bottom:4px;letter-spacing:.04em}
+
+/* ON THE GO */
+.gogrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.gogrid{grid-template-columns:1fr}}
+.gocard{padding:22px}
+.gocard span.gi{font-size:30px;display:block;margin-bottom:12px}
+.gocard h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--sand-soft);margin-bottom:8px}
+.gocard p{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:8px}
+.gotag{font-family:'DM Mono',monospace;font-size:12px;color:var(--green);letter-spacing:.05em}
+
+.prep-box{margin-top:40px}
+.prep-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:6px}
+.prep-sub{font-size:13px;color:var(--text-dim);margin-bottom:20px}
+.prep-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;text-align:center}
+@media(max-width:560px){.prep-grid{grid-template-columns:repeat(4,1fr)}}
+.pd{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 6px}
+.pd .dn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--green);margin-bottom:6px}
+.pd .dt{font-size:13px;color:var(--text-mid);line-height:1.5}
+.pd.hi{background:var(--forest-3);border-color:rgba(77,170,94,.35)}
+
+/* SWAPS */
+.sl{display:flex;flex-direction:column;gap:10px}
+.srow{display:grid;grid-template-columns:1fr 28px 1fr;gap:10px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;transition:border-color .2s}
+.srow:hover{border-color:var(--border-h)}
+.sfrom{font-size:14px;color:rgba(244,237,218,.4);text-decoration:line-through;text-decoration-color:rgba(196,96,58,.5)}
+.snote{font-size:12px;color:var(--text-dim);margin-top:2px;font-style:italic}
+.sarr{color:var(--green);font-size:20px;text-align:center}
+.sto{font-size:14px;color:var(--cream);font-weight:500}
+.stitle{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--sand);text-transform:uppercase;margin:32px 0 14px;padding-left:4px}
+@media(max-width:500px){.srow{grid-template-columns:1fr 20px 1fr;gap:6px;padding:12px 12px}}
+
+/* BUILDER */
+.bwrap{background:var(--forest-3);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:40px}
+.bwrap h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--cream);margin-bottom:6px}
+.bdesc{font-size:14px;color:var(--text-dim);margin-bottom:28px;line-height:1.6}
+.brow{margin-bottom:22px}
+.blabel{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--green);text-transform:uppercase;margin-bottom:10px}
+.bopts{display:flex;flex-wrap:wrap;gap:8px}
+.bopt{background:var(--forest-2);border:1px solid rgba(77,170,94,.2);border-radius:8px;padding:9px 18px;font-size:14px;color:var(--text-mid);cursor:pointer;transition:all .2s;user-select:none}
+.bopt:hover{border-color:var(--green);color:var(--cream)}
+.bopt.sel{background:rgba(77,170,94,.18);border-color:var(--green);color:var(--green-pale);font-weight:500}
+.bout{margin-top:28px;background:var(--forest-2);border:1px solid rgba(77,170,94,.3);border-radius:12px;padding:24px;display:none}
+.bout.show{display:block}
+.outtitle{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:14px}
+.outgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:14px}
+@media(max-width:480px){.outgrid{grid-template-columns:1fr}}
+.ocol h4{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--green);margin-bottom:10px;text-transform:uppercase}
+.ocol ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.ocol li{font-size:14px;color:var(--text-mid);padding-left:16px;position:relative;line-height:1.6}
+.ocol li::before{content:'→';position:absolute;left:0;color:var(--green);font-size:12px;top:3px}
+.ostats{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.ostat{font-family:'DM Mono',monospace;font-size:12px;color:var(--text-dim);letter-spacing:.04em}
+.ostat span{color:var(--green-soft)}
+.otip{font-size:14px;color:var(--text-dim);font-style:italic;padding-top:12px;border-top:1px solid var(--border);margin-top:8px;line-height:1.65}
+.bbtn{background:var(--green);color:var(--forest);border:none;border-radius:8px;padding:13px 28px;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.04em}
+.bbtn:hover{background:var(--green-soft);transform:translateY(-1px)}
+.rbtn{background:transparent;color:var(--text-dim);border:1px solid rgba(244,237,218,.15);border-radius:8px;padding:13px 20px;font-family:'Jost',sans-serif;font-size:13px;cursor:pointer;transition:all .2s;margin-left:10px}
+.rbtn:hover{color:var(--cream);border-color:rgba(244,237,218,.3)}
+
+/* RECIPES */
+.rgrid{display:flex;flex-direction:column;gap:24px}
+.rcard{border-radius:14px;overflow:hidden}
+.rtop{padding:20px 24px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:1px solid var(--border)}
+.rtop h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:4px}
+.rtop p{font-size:13.5px;color:var(--text-dim);font-style:italic}
+.rbadge{font-family:'DM Mono',monospace;font-size:12px;color:var(--forest);background:var(--green);padding:6px 14px;border-radius:100px;white-space:nowrap;flex-shrink:0;align-self:flex-start}
+.rmeta{padding:10px 24px;display:flex;gap:18px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.rm{font-family:'DM Mono',monospace;font-size:12px;color:var(--text-dim);letter-spacing:.05em}
+.rm span{color:var(--green-soft)}
+.rbody{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:500px){.rbody{grid-template-columns:1fr}}
+.cl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--green);margin-bottom:12px;text-transform:uppercase}
+.il,.stl{list-style:none;display:flex;flex-direction:column;gap:8px}
+.il li{font-size:14px;color:var(--text-mid);padding-left:16px;position:relative;line-height:1.55}
+.il li::before{content:'·';position:absolute;left:0;color:var(--green)}
+.stl{counter-reset:step}
+.stl li{font-size:14px;color:var(--text-mid);padding-left:26px;position:relative;counter-increment:step;line-height:1.65}
+.stl li::before{content:counter(step);position:absolute;left:0;width:18px;height:18px;background:rgba(77,170,94,.15);color:var(--green);border-radius:50%;font-size:10px;font-family:'DM Mono',monospace;display:flex;align-items:center;justify-content:center;top:2px}
+.rnote{margin:0 24px 20px;background:rgba(77,170,94,.08);border-radius:8px;padding:12px 16px;font-family:'DM Mono',monospace;font-size:12px;color:var(--green-pale);letter-spacing:.04em;line-height:1.65}
+
+/* SCIENCE */
+.scigrid{display:flex;flex-direction:column;gap:18px}
+.scicard{padding:24px 26px;border-left:3px solid var(--sand)}
+.scicard h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--sand-soft);margin-bottom:10px}
+.scicard p{font-size:14px;color:var(--text-mid);line-height:1.75}
+.scicard .src{margin-top:10px;font-family:'DM Mono',monospace;font-size:11px;color:rgba(244,237,218,.28);letter-spacing:.05em}
+.nsbox{margin-top:36px;background:linear-gradient(135deg,rgba(77,170,94,.1),rgba(201,160,87,.07));border:1px solid rgba(77,170,94,.22);border-radius:14px;padding:28px 30px}
+.nsbox h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:12px}
+.nsbox p{font-size:14px;color:var(--text-mid);line-height:1.8}
+.nsh{color:var(--green-soft);font-weight:500}
+
+/* QUIZ */
+.quiz-wrap{max-width:720px;margin:0 auto}
+.qprogbar{height:4px;background:rgba(77,170,94,.15);border-radius:2px;margin-bottom:40px;overflow:hidden}
+.qprogfill{height:100%;background:linear-gradient(90deg,var(--green),var(--green-soft));border-radius:2px;transition:width .5s ease}
+.qcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px 36px;margin-bottom:0;animation:up .35s ease}
+.qnum{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--green);margin-bottom:12px;text-transform:uppercase}
+.qtext{font-family:'Playfair Display',serif;font-size:clamp(18px,3.5vw,24px);color:var(--cream);line-height:1.35;margin-bottom:28px}
+.qopts{display:flex;flex-direction:column;gap:10px}
+.qopt{background:var(--forest-2);border:1px solid rgba(77,170,94,.2);border-radius:10px;padding:14px 20px;font-size:14.5px;color:var(--text-mid);cursor:pointer;transition:all .2s;text-align:left;line-height:1.5}
+.qopt:hover{border-color:var(--green);color:var(--cream);background:rgba(77,170,94,.08)}
+.qopt.chosen{border-color:var(--green);color:var(--green-pale);background:rgba(77,170,94,.14);font-weight:500}
+.qopt.correct{border-color:#4daa5e;background:rgba(77,170,94,.2);color:var(--green-pale)}
+.qopt.wrong{border-color:rgba(196,96,58,.5);background:rgba(196,96,58,.08);color:rgba(244,237,218,.5)}
+.qfeedback{margin-top:16px;padding:14px 18px;background:rgba(77,170,94,.07);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13.5px;color:var(--text-mid);line-height:1.65;display:none}
+.qnext{margin-top:20px;background:var(--green);color:var(--forest);border:none;border-radius:8px;padding:12px 28px;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:none}
+.qnext:hover{background:var(--green-soft);transform:translateY(-1px)}
+
+/* QUIZ LEAD CAPTURE */
+.qlead{background:linear-gradient(135deg,var(--forest-3),var(--forest-2));border:1px solid rgba(201,160,87,.3);border-radius:16px;padding:40px 36px;text-align:center;display:none}
+.qlead h3{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,32px);color:var(--cream);margin-bottom:10px}
+.qlead p{font-size:15px;color:var(--text-mid);line-height:1.75;max-width:480px;margin:0 auto 28px}
+.qform{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto}
+.qinput{background:var(--forest-2);border:1px solid rgba(77,170,94,.3);border-radius:8px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;color:var(--cream);outline:none;transition:border-color .2s}
+.qinput::placeholder{color:var(--text-dim)}
+.qinput:focus{border-color:var(--green)}
+.qsubmit{background:var(--sand);color:var(--forest);border:none;border-radius:8px;padding:15px;font-family:'Jost',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.04em}
+.qsubmit:hover{background:var(--sand-soft);transform:translateY(-1px)}
+.qprivacy{font-size:12px;color:var(--text-dim);margin-top:6px}
+
+/* QUIZ RESULTS */
+.qresult{display:none;animation:up .5s ease}
+.qresult-hero{text-align:center;padding:36px 24px;background:linear-gradient(135deg,rgba(77,170,94,.1),rgba(201,160,87,.07));border:1px solid rgba(201,160,87,.25);border-radius:16px;margin-bottom:28px}
+.qage{font-family:'Playfair Display',serif;font-size:clamp(60px,14vw,100px);color:var(--green-soft);line-height:1;margin:12px 0 4px}
+.qage-label{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--sand);text-transform:uppercase;margin-bottom:16px}
+.qgrade{font-family:'Playfair Display',serif;font-size:clamp(20px,4vw,30px);color:var(--cream);margin-bottom:14px}
+.qsummary{font-size:14.5px;color:var(--text-mid);line-height:1.8;max-width:560px;margin:0 auto}
+.qbreakdown{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+@media(max-width:500px){.qbreakdown{grid-template-columns:1fr}}
+.qbd{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.qbd-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--green);text-transform:uppercase;margin-bottom:6px}
+.qbd-val{font-size:15px;color:var(--cream);font-weight:500}
+.qbd-note{font-size:12.5px;color:var(--text-dim);margin-top:4px;line-height:1.5}
+.qcta{background:var(--forest-3);border:1px solid rgba(201,160,87,.25);border-radius:14px;padding:28px 30px;text-align:center;margin-top:24px}
+.qcta h4{font-family:'Playfair Display',serif;font-size:20px;color:var(--sand-soft);margin-bottom:10px}
+.qcta p{font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:18px}
+.qretake{background:transparent;border:1px solid rgba(77,170,94,.4);color:var(--green);border-radius:8px;padding:11px 24px;font-family:'Jost',sans-serif;font-size:13px;cursor:pointer;transition:all .2s}
+.qretake:hover{background:rgba(77,170,94,.1)}
+.about-wrap{background:var(--forest-2);border-top:1px solid var(--border);padding:60px 24px}
+.about-in{max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+@media(max-width:620px){.about-in{grid-template-columns:1fr}}
+.aname{font-family:'Playfair Display',serif;font-size:clamp(22px,5vw,36px);color:var(--cream);line-height:1.1;margin-bottom:4px}
+.aname em{color:var(--green-soft);font-style:italic}
+.atitle{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--sand);text-transform:uppercase;margin-bottom:16px}
+.abio{font-size:14.5px;color:var(--text-mid);line-height:1.8;margin-bottom:14px}
+.alinks{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.alink{display:flex;align-items:center;gap:12px;color:var(--text-mid);text-decoration:none;font-size:14px;transition:all .2s;padding:12px 16px;background:var(--forest-3);border:1px solid var(--border);border-radius:10px}
+.alink:hover{color:var(--cream);border-color:var(--border-h);transform:translateX(3px)}
+.alink .ai{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.aw .ai{background:rgba(77,170,94,.15)}
+.aig .ai{background:rgba(196,96,58,.15)}
+.ali .ai{background:rgba(77,130,170,.15)}
+.alink strong{display:block;color:var(--cream);margin-bottom:1px;font-size:14px}
+.alink small{font-size:12px;color:var(--text-dim)}
+.ar h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:14px}
+.ar p{font-size:14.5px;color:var(--text-mid);line-height:1.8;margin-bottom:14px}
+.aq{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--sand-soft);border-left:2px solid var(--sand);padding-left:16px;margin-top:22px;line-height:1.6}
+.aqsig{font-size:12px;font-style:normal;color:var(--text-dim);font-family:'DM Mono',monospace;letter-spacing:.05em;margin-top:10px;display:block}
+
+.footer{background:var(--forest);border-top:1px solid var(--border);padding:28px 24px;text-align:center}
+.footer p{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(244,237,218,.28)}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+  <p class="ey">Longevity Nutrition · Plant-Based Living</p>
+  <h1>Eat <em>Well.</em></h1>
+  <div class="h-sub-title">Any Budget. Any Day.</div>
+  <p class="h-desc">Plant-powered, science-backed strategies for nourishing yourself — whether you're meal prepping on Sunday or grabbing something between back-to-back meetings. 100% plant-based. Always.</p>
+  <div class="pills">
+    <div class="pill">100% Plant-Based</div>
+    <div class="pill">Meals from $0.75</div>
+    <div class="pill">30 min or less</div>
+    <div class="pill">Nervous System–Friendly</div>
+    <div class="pill">No-cook options</div>
+    <div class="pill">Meal-prep ready</div>
+  </div>
+  <div class="scroll-hint"><span>EXPLORE BELOW</span><div class="sbar"></div></div>
+</section>
+
+<nav class="nav">
+  <div class="nav-i">
+    <button class="tab on" onclick="show('budget',this)">💰 Budget Foods</button>
+    <button class="tab" onclick="show('go',this)">⚡ On the Go</button>
+    <button class="tab" onclick="show('swaps',this)">🔄 Smart Swaps</button>
+    <button class="tab" onclick="show('builder',this)">🍽 Meal Builder</button>
+    <button class="tab" onclick="show('recipes',this)">🥗 Recipes</button>
+    <button class="tab" onclick="show('science',this)">🧬 The Science</button>
+    <button class="tab" onclick="show('quiz',this)">🔮 Longevity Quiz</button>
+    <button class="tab" onclick="show('about',this)">🌿 About</button>
+  </div>
+</nav>
+
+<!-- BUDGET FOODS -->
+<section id="budget" class="sec on">
+  <p class="eyebrow">The Power Eight</p>
+  <h2 class="sec-title">Most nutritious.<br><em>Most affordable.</em></h2>
+  <p class="intro">These eight staples form the backbone of a thriving plant-based diet on any budget — covering complete protein, all major vitamins, fiber, healthy fats, and slow-burning carbohydrates for under $3 a day.</p>
+  <div class="pgrid">
+    <div class="card pcard"><div class="pnum">01</div><div class="pb"><h3>Red & Green Lentils</h3><p>18g protein per cup cooked, 16g fiber, rich in iron, folate, and magnesium. Red lentils dissolve into soups and sauces in 20 minutes flat. Green lentils hold their shape for salads and grain bowls. No soaking needed — ever.</p><p class="why">★ Folate supports cognitive function under stress. Magnesium directly regulates nervous system calm and sleep quality — most adults are chronically deficient.</p></div><div class="pcost">$0.25–0.45/srv</div></div>
+    <div class="card pcard"><div class="pnum">02</div><div class="pb"><h3>Rolled Oats</h3><p>Beta-glucan — a specific soluble fiber in oats — is one of the most researched nutrients for blunting the cortisol stress response and feeding the gut bacteria responsible for serotonin production. Buy large-container rolled oats only. Flavored instant packets are 4× the price and packed with added sugar.</p><p class="why">★ 70% of serotonin is produced in the gut. A fiber-fed microbiome is a mental health strategy.</p></div><div class="pcost">$0.10–0.18/srv</div></div>
+    <div class="card pcard"><div class="pnum">03</div><div class="pb"><h3>Frozen Spinach & Broccoli</h3><p>Flash-frozen within hours of harvest — often significantly MORE nutrient-dense than "fresh" produce that traveled 4–7 days to reach the store. Frozen spinach is extraordinarily dense: iron, vitamin K, folate, and lutein in every serving. Add to literally anything — smoothies, soups, pasta, stir-fries.</p><p class="why">★ Vitamin K is critical for bone health, brain plasticity, and anti-inflammatory regulation. Lutein specifically protects eye and brain tissue.</p></div><div class="pcost">$0.28–0.55/srv</div></div>
+    <div class="card pcard"><div class="pnum">04</div><div class="pb"><h3>Canned Chickpeas & Black Beans</h3><p>Drain, rinse, and they're ready — zero cooking time. Chickpeas are extraordinarily versatile: roast crispy, blend into hummus, toss into salads or curries. Black beans contain anthocyanins — the same powerful antioxidants found in blueberries. The canning liquid (aquafaba) replaces binding agents in plant-based baking.</p><p class="why">★ Resistant starch in beans feeds protective gut bacteria and reduces post-meal glucose spikes by up to 40%, sustaining afternoon energy and focus.</p></div><div class="pcost">$0.35–0.55/srv</div></div>
+    <div class="card pcard"><div class="pnum">05</div><div class="pb"><h3>Quinoa & Brown Rice</h3><p>Brown rice delivers sustained glucose with B vitamins fully intact. Quinoa is nutritionally exceptional: one of the only plant foods qualifying as a complete protein — all 9 essential amino acids, plus fiber and iron. Cook large batches Sunday. Refrigerate 5 days, freeze perfectly for months.</p><p class="why">★ Complex carbohydrates are the brain's primary fuel source and support stable serotonin production. They are not the enemy.</p></div><div class="pcost">$0.20–0.40/srv</div></div>
+    <div class="card pcard"><div class="pnum">06</div><div class="pb"><h3>Canned Tomatoes</h3><p>Lycopene — the antioxidant linked to reduced cardiovascular disease and certain cancer risks — becomes dramatically MORE bioavailable after cooking. Canned tomatoes are pre-cooked. Diced, crushed, or whole — they form the flavor base of soups, stews, curries, and pasta sauces in under 10 minutes.</p><p class="why">★ Lycopene specifically targets oxidative stress in the cardiovascular system — the leading driver of chronic illness in the American workforce.</p></div><div class="pcost">$0.38–0.58/srv</div></div>
+    <div class="card pcard"><div class="pnum">07</div><div class="pb"><h3>Walnuts & Sunflower Seeds</h3><p>Walnuts are the only nut high in ALA omega-3 fatty acids — the brain-protective fats linked to reduced depression risk and cognitive resilience under chronic stress. Sunflower seeds are one of the most concentrated plant sources of vitamin E, a key antioxidant for immune function and skin integrity.</p><p class="why">★ ALA omega-3s reduce systemic inflammation — the root driver behind chronic fatigue, brain fog, and mood dysregulation in high-stress environments.</p></div><div class="pcost">$0.30–0.60/srv</div></div>
+    <div class="card pcard"><div class="pnum">08</div><div class="pb"><h3>Bananas & Seasonal Fruit</h3><p>Bananas are calorie-dense, portable, naturally sweet, and among the cheapest foods per calorie. Rich in potassium (blood pressure and muscle function), vitamin B6 (serotonin and dopamine precursor), and resistant starch when slightly underripe. Pair with peanut butter: protein + fat + carb in 30 seconds flat.</p><p class="why">★ B6 deficiency is directly linked to irritability, fatigue, and poor sleep — three of the most common workforce wellness complaints.</p></div><div class="pcost">$0.12–0.30/srv</div></div>
+  </div>
+
+  <div class="tips-box">
+    <h3>🛒 Strategic Shopping</h3>
+    <div class="tgrid">
+      <div class="ti"><strong>STORE BRAND = SAME FACTORY</strong>Store-brand canned goods, oats, and frozen vegetables are produced identically. The markup on name brands is pure marketing. Always choose store brand for pantry staples — you will not taste the difference.</div>
+      <div class="ti"><strong>SEASONAL = CHEAPEST + MOST NUTRITIOUS</strong>Whatever's on sale or in-season is at its nutritional peak. Ask produce staff what arrived fresh. Build meals around those items and let the season guide your plate.</div>
+      <div class="ti"><strong>DRY BEANS VS. CANNED</strong>Dry beans cost 30–50% less. Cook a large pot Sunday and refrigerate or freeze in portions. But canned beans are still inexpensive and are the ultimate convenience food — never avoid them on a busy week.</div>
+      <div class="ti"><strong>BULK BINS ARE GOLD</strong>Grains, nuts, seeds, and dried fruit from bulk bins are consistently cheaper than packaged equivalents. Buy only what you need — zero waste, maximum freshness, minimum cost.</div>
+      <div class="ti"><strong>SPICE INVESTMENT PAYS OFF</strong>A $3 jar of cumin, turmeric, or smoked paprika transforms cheap staples into genuinely crave-worthy meals. Good spices are the difference between eating on a budget feeling like deprivation versus abundance.</div>
+      <div class="ti"><strong>SHOP PERIMETER LAST</strong>Fill 70% of your basket from dry goods and canned aisles first. Then visit produce. This protects your staples budget and prevents impulse buys derailing your weekly plan.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ON THE GO -->
+<section id="go" class="sec">
+  <p class="eyebrow">Real Life, Real Food</p>
+  <h2 class="sec-title">No time?<br><em>No excuse needed.</em></h2>
+  <p class="intro">Busy schedules don't require poor nutrition — they require smart systems. These strategies are designed for actual workdays, commutes, and back-to-back meeting marathons. Several require zero cooking whatsoever.</p>
+
+  <div class="gogrid">
+    <div class="card gocard"><span class="gi">🫙</span><h3>Overnight Oats System</h3><p>Prep 5 jars Sunday evening in 15 minutes total. Oats + oat milk + chia seeds + fruit. Refrigerate. Monday through Friday: open jar, eat. No heat. No thinking. Completely grab-and-go.</p><p>Vary toppings so it never feels repetitive — peanut butter banana Monday, berry Tuesday, apple cinnamon Wednesday, cocoa walnut Thursday, mango Friday.</p><p class="gotag">→ $0.75–1.00/jar · week prepped in 15 min · zero morning decisions</p></div>
+    <div class="card gocard"><span class="gi">🌯</span><h3>The 3-Minute Wrap</h3><p>Corn tortilla + canned beans (drained) + mashed avocado + salsa + lime. Wrap and go. Complete meal — carb, protein, fat, fiber — in under 3 minutes with zero cooking and zero dishes.</p><p>Make two. Eat one now. Wrap the second in foil. Lunch is handled.</p><p class="gotag">→ ~14g protein · holds 2–3 hrs without refrigeration · $1.50 total</p></div>
+    <div class="card gocard"><span class="gi">🫘</span><h3>Batch Grain Strategy</h3><p>One pot of lentils or brown rice Sunday (40 min, largely unattended) = the foundation of 5 weekday lunches. Add frozen vegetables microwaved 2 min, a scoop of salsa or soy sauce, done. Lunch in 4 minutes.</p><p>Rotate sauces to keep variety: curry paste, tahini-lemon, tomato sauce, soy-ginger, chimichurri.</p><p class="gotag">→ $1.20–1.80/meal · zero weekday decision fatigue</p></div>
+    <div class="card gocard"><span class="gi">🧆</span><h3>Desk Snack Station</h3><p>Pre-pack Monday morning: roasted chickpeas, apple, tablespoon of peanut butter in a small jar, small bag of walnuts and dates. This covers every craving category — crunchy, sweet, savory, satisfying.</p><p>Prevents vending machine emergencies every single day this week.</p><p class="gotag">→ ~$1.50 for a full day of snacks · far superior nutrition</p></div>
+    <div class="card gocard"><span class="gi">🧊</span><h3>Freeze Your Future Self</h3><p>Lentil soup, bean chili, coconut curry, and cooked grains all freeze perfectly in individual portions. When you cook, always make double and freeze half immediately. Future-you on a depleted Wednesday will be sincerely grateful.</p><p class="gotag">→ The single highest-ROI wellness habit for busy people, full stop</p></div>
+    <div class="card gocard"><span class="gi">🫐</span><h3>Freezer Smoothie Packs</h3><p>Pre-portion into freezer bags Sunday: frozen spinach, frozen banana chunks, frozen berries. Each morning, dump one bag into blender + oat milk, blend 45 seconds. Complete nutrient-dense meal in under 90 seconds.</p><p class="gotag">→ $1.20/smoothie · 5 packs prepped in 10 min · undetectable spinach</p></div>
+    <div class="card gocard"><span class="gi">☕</span><h3>Smarter Hydration & Energy</h3><p>Green tea delivers steady caffeine via L-theanine — focused alertness without the cortisol spike of coffee or energy drinks. Brew a large batch, refrigerate, drink cold. Water with cucumber, mint, or citrus increases actual consumption.</p><p>Skipping a $6 daily coffee habit saves over $1,500 per year.</p><p class="gotag">→ L-theanine = calm focus, no crash, no anxiety spike</p></div>
+    <div class="card gocard"><span class="gi">🥗</span><h3>Mason Jar Salads</h3><p>Layer: dressing on bottom, sturdy vegetables, grains or beans, delicate greens on top. Seal. Refrigerate. Greens never touch dressing until you shake and eat. Stays crisp and fresh 3–4 days without any sogginess.</p><p class="gotag">→ 5 salads in 20 min · fresh through Thursday · no wilting</p></div>
+  </div>
+
+  <div class="prep-box">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:6px">The Sunday Reset</h3>
+    <p class="prep-sub">60–90 minutes on Sunday = effortless, nourishing food all week long</p>
+    <div class="prep-grid">
+      <div class="pd hi"><div class="dn">SUN</div><div class="dt">Cook grains. Batch soup. 5 oat jars. Smoothie packs. Snack bags.</div></div>
+      <div class="pd"><div class="dn">MON</div><div class="dt">Oats from fridge. Grain bowl lunch. Apple + nut butter snack.</div></div>
+      <div class="pd"><div class="dn">TUE</div><div class="dt">Smoothie. Bean wrap. Roasted chickpeas.</div></div>
+      <div class="pd"><div class="dn">WED</div><div class="dt">Oats. Mason jar salad. Warm soup from freezer.</div></div>
+      <div class="pd"><div class="dn">THU</div><div class="dt">Smoothie. Grain bowl variation. Walnuts + dates.</div></div>
+      <div class="pd"><div class="dn">FRI</div><div class="dt">Oats. Leftover soup or wrap. Trail mix.</div></div>
+      <div class="pd"><div class="dn">SAT</div><div class="dt">Cook something new. Enjoy. Rest. Plan next week.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SWAPS -->
+<section id="swaps" class="sec">
+  <p class="eyebrow">15 Smart Swaps</p>
+  <h2 class="sec-title">Same nutrition.<br><em>Less money.</em></h2>
+  <p class="intro">These are not sacrifices — they're upgrades. Every swap preserves or improves nutritional quality while cutting costs significantly. And every single one is 100% plant-based.</p>
+
+  <p class="stitle">🏪 At the grocery store</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Name-brand canned goods<div class="snote">Up to 40% price markup</div></div><div class="sarr">→</div><div class="sto">Store-brand. Same factory. Same nutrition. Different label. Always.</div></div>
+    <div class="srow"><div class="sfrom">Pre-cut vegetables<div class="snote">2–3× the cost, less fresh</div></div><div class="sarr">→</div><div class="sto">Whole vegetables — 30 seconds to chop, half the price, more nutritious.</div></div>
+    <div class="srow"><div class="sfrom">Bagged salad kits ($6–9)<div class="snote">Wilts in 48 hours</div></div><div class="sarr">→</div><div class="sto">Bulk greens + tahini-lemon dressing + seeds — fresher, cheaper, better.</div></div>
+    <div class="srow"><div class="sfrom">Bottled juice ($3–6)<div class="snote">High sugar, no fiber, expensive</div></div><div class="sarr">→</div><div class="sto">Whole fruit — more fiber, slower glucose, fraction of the cost.</div></div>
+    <div class="srow"><div class="sfrom">Smoothie kits & frozen mixes<div class="snote">$4–7 per serving</div></div><div class="sarr">→</div><div class="sto">Frozen spinach + frozen banana + oat milk. Same nutrition. $1.20.</div></div>
+  </div>
+
+  <p class="stitle">☀️ At work & on the go</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Vending machine snacks<div class="snote">$1.75–3, ultra-processed, zero fiber</div></div><div class="sarr">→</div><div class="sto">Pre-packed roasted chickpeas, apple + nut butter, handful of walnuts.</div></div>
+    <div class="srow"><div class="sfrom">Energy drinks ($3–5/can)<div class="snote">Cortisol spike → crash → more cravings</div></div><div class="sarr">→</div><div class="sto">Cold-brew green tea. L-theanine delivers focused calm without the crash.</div></div>
+    <div class="srow"><div class="sfrom">Daily $5–7 latte habit<div class="snote">$1,800+ per year</div></div><div class="sarr">→</div><div class="sto">Home-brewed matcha or oat milk coffee. $0.35/cup. Same ritual.</div></div>
+    <div class="srow"><div class="sfrom">Weekday takeout ($12–20)<div class="snote">$3,000–5,000+ per year</div></div><div class="sarr">→</div><div class="sto">Sunday batch meals: $1.50–2/meal, more satisfying, zero wait time.</div></div>
+    <div class="srow"><div class="sfrom">Commercial protein bars ($2–5)<div class="snote">Often high sugar, ultra-processed</div></div><div class="sarr">→</div><div class="sto">Oats + walnuts + sunflower seeds + dried dates. Homemade trail mix.</div></div>
+  </div>
+
+  <p class="stitle">🌿 In the kitchen</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Animal-based protein ($4–10/srv)<div class="snote">High saturated fat, high cost</div></div><div class="sarr">→</div><div class="sto">Lentils or chickpeas — equal or higher protein, more fiber, 90% cheaper.</div></div>
+    <div class="srow"><div class="sfrom">Dairy milk in cooking<div class="snote">Saturated fat, hormones, inflammatory</div></div><div class="sarr">→</div><div class="sto">Oat milk or full-fat coconut milk — richer, plant-based, versatile.</div></div>
+    <div class="srow"><div class="sfrom">Flavored instant oats ($3–5/box)<div class="snote">4× price, high added sugar</div></div><div class="sarr">→</div><div class="sto">Plain rolled oats + banana + cinnamon + plant milk. Naturally sweeter.</div></div>
+    <div class="srow"><div class="sfrom">Store-bought salad dressing<div class="snote">High sodium, seed oils, added sugar</div></div><div class="sarr">→</div><div class="sto">Tahini + lemon + garlic + water. 2 minutes. $0.40. Extraordinary flavor.</div></div>
+    <div class="srow"><div class="sfrom">Cooking spray / excess oil<div class="snote">Propellants + empty calories</div></div><div class="sarr">→</div><div class="sto">Sauté with vegetable broth or water — works perfectly for most dishes.</div></div>
+  </div>
+
+  <p class="stitle" style="margin-top:48px">🚨 Allergy-Friendly Swaps</p>
+  <p style="font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:20px;max-width:640px">Common allergens don't have to sideline you. Every swap below maintains nutrition, flavor, and function — without the reactive ingredient.</p>
+
+  <p class="stitle" style="font-size:11px;margin-top:0">🥜 Peanut / Tree Nut Allergy</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Peanut butter<div class="snote">Top allergen</div></div><div class="sarr">→</div><div class="sto">Sunflower seed butter — nearly identical nutrition, nut-free, same texture.</div></div>
+    <div class="srow"><div class="sfrom">Tahini (sesame) — if sesame allergy<div class="snote">Hidden in hummus, dressings</div></div><div class="sarr">→</div><div class="sto">Pumpkin seed butter or sunflower seed butter — creamy, mild, allergen-free.</div></div>
+    <div class="srow"><div class="sfrom">Almond milk<div class="snote">Tree nut</div></div><div class="sarr">→</div><div class="sto">Oat milk or rice milk — naturally creamy, nut-free, widely available.</div></div>
+    <div class="srow"><div class="sfrom">Walnuts or cashews in recipes<div class="snote">Tree nuts</div></div><div class="sarr">→</div><div class="sto">Roasted pumpkin seeds (pepitas) or sunflower seeds — same crunch, nut-free.</div></div>
+  </div>
+
+  <p class="stitle" style="font-size:11px">🌾 Gluten / Wheat Allergy or Sensitivity</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Whole wheat pasta or bread<div class="snote">Gluten-containing</div></div><div class="sarr">→</div><div class="sto">Brown rice pasta, buckwheat soba, or certified gluten-free oat pasta.</div></div>
+    <div class="srow"><div class="sfrom">Rolled oats (standard)<div class="snote">Often cross-contaminated</div></div><div class="sarr">→</div><div class="sto">Certified gluten-free rolled oats — same nutrition, safe for most celiac.</div></div>
+    <div class="srow"><div class="sfrom">Soy sauce / tamari (some brands)<div class="snote">May contain wheat</div></div><div class="sarr">→</div><div class="sto">Certified gluten-free tamari — identical flavor, zero wheat, same bottle swap.</div></div>
+    <div class="srow"><div class="sfrom">Flour tortillas<div class="snote">Wheat-based</div></div><div class="sarr">→</div><div class="sto">100% corn tortillas — naturally gluten-free, more fiber, traditional choice.</div></div>
+    <div class="srow"><div class="sfrom">Couscous or bulgur<div class="snote">Wheat-derived</div></div><div class="sarr">→</div><div class="sto">Quinoa or millet — gluten-free, complete protein, versatile grain swaps.</div></div>
+  </div>
+
+  <p class="stitle" style="font-size:11px">🫘 Soy Allergy</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Edamame or tofu<div class="snote">Soy-derived</div></div><div class="sarr">→</div><div class="sto">White beans, chickpeas, or lentils — comparable protein, soy-free.</div></div>
+    <div class="srow"><div class="sfrom">Tamari or soy sauce<div class="snote">Soy-based</div></div><div class="sarr">→</div><div class="sto">Coconut aminos — slightly sweeter, same umami depth, entirely soy-free.</div></div>
+    <div class="srow"><div class="sfrom">Soy milk<div class="snote">Soy-based</div></div><div class="sarr">→</div><div class="sto">Oat milk or pea milk — both high-protein, creamy, soy-free alternatives.</div></div>
+  </div>
+
+  <p class="stitle" style="font-size:11px">🌽 Corn Sensitivity</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Corn tortillas<div class="snote">Corn-based</div></div><div class="sarr">→</div><div class="sto">Brown rice wraps or lettuce cups — naturally corn-free, light and functional.</div></div>
+    <div class="srow"><div class="sfrom">Cornstarch as thickener<div class="snote">Corn-derived</div></div><div class="sarr">→</div><div class="sto">Arrowroot powder or blended white beans — same thickening power, corn-free.</div></div>
+  </div>
+
+  <p class="stitle" style="font-size:11px">🫒 Nightshade Sensitivity (tomato, pepper, potato)</p>
+  <div class="sl">
+    <div class="srow"><div class="sfrom">Canned diced tomatoes<div class="snote">Nightshade</div></div><div class="sarr">→</div><div class="sto">Pumpkin purée or butternut squash — similar body and subtle sweetness in soups.</div></div>
+    <div class="srow"><div class="sfrom">Bell peppers<div class="snote">Nightshade</div></div><div class="sarr">→</div><div class="sto">Shredded carrots, zucchini, or fennel — color, crunch, and sweetness without nightshades.</div></div>
+    <div class="srow"><div class="sfrom">Paprika or chili powder<div class="snote">Nightshade-derived spices</div></div><div class="sarr">→</div><div class="sto">Cumin, turmeric, coriander, or za'atar — equally bold and fragrant, nightshade-free.</div></div>
+  </div>
+</section>
+
+<!-- MEAL BUILDER -->
+<section id="builder" class="sec">
+  <p class="eyebrow">Interactive Tool</p>
+  <h2 class="sec-title">Build your<br><em>perfect meal.</em></h2>
+  <p class="intro">We'll generate a complete plant-based meal with ingredients, prep steps, and a nutrition snapshot. Every combination is 100% plant-based and budget-friendly.</p>
+
+  <div class="bwrap">
+    <h3>🍽 Plant-Based Meal Builder</h3>
+    <p class="bdesc">Choose your ingredients from each row, then hit Build My Meal.</p>
+
+    <div class="brow">
+      <div class="blabel">1 — Your base</div>
+      <div class="bopts">
+        <div class="bopt" data-g="base" onclick="pick(this)">Brown Rice</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Quinoa</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Green Lentils</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Rolled Oats</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Corn Tortillas</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Mixed Greens</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Whole Grain Pasta</div>
+        <div class="bopt" data-g="base" onclick="pick(this)">Roasted Sweet Potato</div>
+      </div>
+    </div>
+
+    <div class="brow">
+      <div class="blabel">2 — Your protein</div>
+      <div class="bopts">
+        <div class="bopt" data-g="protein" onclick="pick(this)">Chickpeas</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Black Beans</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Red Lentils</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Edamame</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Tofu</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">White Beans</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Tempeh</div>
+        <div class="bopt" data-g="protein" onclick="pick(this)">Walnuts + Seeds</div>
+      </div>
+    </div>
+
+    <div class="brow">
+      <div class="blabel">3 — Your vegetables</div>
+      <div class="bopts">
+        <div class="bopt" data-g="veg" onclick="pick(this)">Frozen Spinach</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Broccoli</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Shredded Cabbage</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Roasted Bell Peppers</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Cherry Tomatoes</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Cucumber & Herbs</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Zucchini</div>
+        <div class="bopt" data-g="veg" onclick="pick(this)">Kale</div>
+      </div>
+    </div>
+
+    <div class="brow">
+      <div class="blabel">4 — Flavor direction — choose one</div>
+      <div class="bopts">
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Mediterranean</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Mexican-Inspired</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Asian-Inspired</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Indian-Spiced</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Simple & Herby</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Smoky & Bold</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Middle Eastern</div>
+        <div class="bopt" data-g="flavor" onclick="pick(this)">Thai-Inspired</div>
+      </div>
+    </div>
+
+    <div class="brow">
+      <div class="blabel">5 — When are you eating this?</div>
+      <div class="bopts">
+        <div class="bopt" data-g="meal" onclick="pick(this)">Breakfast</div>
+        <div class="bopt" data-g="meal" onclick="pick(this)">Desk Lunch</div>
+        <div class="bopt" data-g="meal" onclick="pick(this)">Dinner</div>
+        <div class="bopt" data-g="meal" onclick="pick(this)">Meal Prep</div>
+        <div class="bopt" data-g="meal" onclick="pick(this)">On the Go</div>
+      </div>
+    </div>
+
+    <div class="brow">
+      <div class="blabel">6 — How many servings?</div>
+      <div class="bopts">
+        <div class="bopt" data-g="servings" onclick="pick(this)">1</div>
+        <div class="bopt" data-g="servings" onclick="pick(this)">2</div>
+        <div class="bopt" data-g="servings" onclick="pick(this)">4</div>
+        <div class="bopt" data-g="servings" onclick="pick(this)">6</div>
+        <div class="bopt" data-g="servings" onclick="pick(this)">8</div>
+      </div>
+    </div>
+
+    <button class="bbtn" onclick="buildMeal()">✨ Build My Meal</button>
+    <button class="rbtn" onclick="resetBuild()">Reset</button>
+
+    <div class="bout" id="bout">
+      <div class="outtitle" id="otitle"></div>
+      <div class="outgrid">
+        <div class="ocol"><h4>You'll need</h4><ul id="oing"></ul></div>
+        <div class="ocol"><h4>How to make it</h4><ul id="osteps"></ul></div>
+      </div>
+      <div class="otip" id="otip"></div>
+      <div class="ostats" id="ostats"></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECIPES -->
+<section id="recipes" class="sec">
+  <p class="eyebrow">9 Essential Recipes</p>
+  <h2 class="sec-title">Real meals.<br><em>Real nourishment.</em></h2>
+  <p class="intro">All recipes are 100% plant-based. No dairy, no eggs, no honey — nothing from animals. Under $3 per serving. Under 30 minutes. Designed for people who want to feel genuinely nourished.</p>
+
+  <div class="rgrid">
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Golden Lentil & Tomato Soup</h3><p>High-protein · anti-inflammatory · freezer-friendly · nervous system–supportive</p></div><div class="rbadge">~$1.20/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>25 min</span></div><div class="rm">Serves: <span>4</span></div><div class="rm">Protein: <span>~18g</span></div><div class="rm">Difficulty: <span>Very Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>1 cup red lentils ($0.40)</li><li>1 can diced tomatoes ($0.60)</li><li>1 large onion, diced ($0.25)</li><li>3 cloves garlic, minced ($0.12)</li><li>1 tsp turmeric ($0.05)</li><li>1 tsp cumin ($0.05)</li><li>½ tsp smoked paprika ($0.03)</li><li>4 cups vegetable broth ($0.35)</li><li>Juice of 1 lemon ($0.25)</li><li>Fresh parsley, salt, pepper</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Sauté onion + garlic in 2 tbsp vegetable broth 3–4 min until translucent.</li><li>Add turmeric, cumin, paprika — stir 30 seconds until fragrant.</li><li>Add lentils, tomatoes, and broth. Stir and bring to a boil.</li><li>Reduce heat. Simmer 20 min, stirring occasionally, until lentils are fully soft.</li><li>Squeeze in lemon juice. Taste and adjust salt generously.</li><li>Top with fresh parsley. Freeze extras in single portions immediately.</li></ol></div>
+      </div>
+      <div class="rnote">★ Turmeric's curcumin is powerfully anti-inflammatory. Lemon's vitamin C increases iron absorption from lentils by up to 300%. This soup is genuinely medicinal food.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Creamy Tahini Buddha Bowl</h3><p>Complete protein · omega-rich · meal-prep perfect · infinitely variable</p></div><div class="rbadge">~$2.20/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>10 min + grain cook</span></div><div class="rm">Serves: <span>1</span></div><div class="rm">Protein: <span>~22g</span></div><div class="rm">Difficulty: <span>Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>½ cup cooked quinoa or brown rice</li><li>½ can chickpeas, rinsed ($0.40)</li><li>1 cup frozen spinach, thawed ($0.28)</li><li>½ cucumber, sliced ($0.28)</li><li>Handful cherry tomatoes ($0.38)</li><li>1 tbsp tahini ($0.25)</li><li>Juice of ½ lemon ($0.12)</li><li>1 clove garlic, minced ($0.04)</li><li>2 tbsp water (to thin dressing)</li><li>1 tbsp sunflower seeds ($0.15)</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Whisk tahini, lemon juice, minced garlic, water, and a pinch of salt until smooth and pourable. Add more water to reach drizzle consistency.</li><li>Warm chickpeas in a dry pan with a pinch of cumin and smoked paprika, 2–3 min.</li><li>Squeeze excess water from thawed spinach. Season lightly with salt.</li><li>Arrange grain, spinach, chickpeas, cucumber, and tomatoes in a wide bowl.</li><li>Drizzle generously with tahini dressing. Top with sunflower seeds.</li><li>Eat immediately or pack dressing separately for later.</li></ol></div>
+      </div>
+      <div class="rnote">★ Tahini (ground sesame) is rich in calcium, zinc, and methionine — complementing chickpea amino acids to form a complete plant protein profile in one bowl.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Spiced Black Bean Tacos</h3><p>15-minute meal · fiber-rich · anthocyanin-loaded · no-cook option</p></div><div class="rbadge">~$1.75/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>15 min</span></div><div class="rm">Serves: <span>2</span></div><div class="rm">Protein: <span>~16g</span></div><div class="rm">Difficulty: <span>Very Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>1 can black beans, drained ($0.80)</li><li>4 corn tortillas ($0.40)</li><li>1 tsp cumin + ½ tsp chili powder</li><li>½ avocado, mashed ($0.60)</li><li>1 cup shredded purple cabbage ($0.20)</li><li>Salsa or pico de gallo ($0.15)</li><li>Lime juice + fresh cilantro</li><li>Optional: pickled jalapeños, hot sauce</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Drain, rinse beans. Warm in pan with cumin + chili powder 3 min. Mash partially — keep some beans whole for texture contrast.</li><li>Mash avocado with lime juice + generous pinch of salt until creamy.</li><li>Warm tortillas directly on gas burner flame 30 sec per side, or in a dry cast iron skillet.</li><li>Spread mashed avocado on each tortilla.</li><li>Layer: spiced beans → purple cabbage → salsa → cilantro.</li><li>Squeeze fresh lime over everything. Eat immediately.</li></ol></div>
+      </div>
+      <div class="rnote">★ Purple cabbage's anthocyanins are the same anti-inflammatory compounds found in blueberries. Avocado fat dramatically increases absorption of fat-soluble vitamins from vegetables by up to 4×.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Overnight Oats — 3 Versions</h3><p>5-minute prep · zero morning effort · cortisol-regulating · gut-supportive</p></div><div class="rbadge">~$0.75–1.00/jar</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>5 min prep · 8 hrs rest</span></div><div class="rm">Serves: <span>1 (×5 for week)</span></div><div class="rm">Protein: <span>~10–14g</span></div><div class="rm">Difficulty: <span>Minimal</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Base (per jar) + 3 versions</p>
+        <ul class="il"><li>½ cup rolled oats ($0.10)</li><li>¾ cup oat milk ($0.20)</li><li>1 tbsp chia seeds ($0.15)</li><li>Pinch of cinnamon</li><li><span style="color:var(--green-soft);font-weight:500">Version A:</span> Sliced banana + 1 tbsp peanut butter</li><li><span style="color:var(--green-soft);font-weight:500">Version B:</span> Frozen mixed berries + ½ tsp vanilla</li><li><span style="color:var(--green-soft);font-weight:500">Version C:</span> Grated apple + cardamom + chopped walnuts</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Combine oats, oat milk, chia seeds, and cinnamon in a lidded jar or container.</li><li>Stir thoroughly so chia seeds distribute evenly — no clumps.</li><li>Add your chosen version's toppings. Stir once more.</li><li>Seal tightly. Refrigerate at least 4 hours, ideally overnight.</li><li>Morning: open and eat cold, or microwave 60–90 seconds.</li><li>Prep 5 jars Sunday = effortless breakfasts all week for $3.75–5.00 total.</li></ol></div>
+      </div>
+      <div class="rnote">★ Chia seeds expand 10× and create lasting satiety for 4–5 hours. Beta-glucan in oats feeds Lactobacillus gut bacteria, which produce GABA — the body's primary calming neurotransmitter.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>One-Pot Coconut Chickpea Curry</h3><p>Rich & deeply satisfying · immune-boosting · freezes beautifully · crowd-pleaser</p></div><div class="rbadge">~$1.80/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>30 min</span></div><div class="rm">Serves: <span>4</span></div><div class="rm">Protein: <span>~15g</span></div><div class="rm">Difficulty: <span>Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>2 cans chickpeas, drained ($1.60)</li><li>1 can full-fat coconut milk ($1.20)</li><li>1 can diced tomatoes ($0.60)</li><li>1 onion, diced ($0.25)</li><li>3 cloves garlic ($0.12)</li><li>1 tbsp curry powder ($0.08)</li><li>1 tsp turmeric ($0.05)</li><li>½ tsp cumin ($0.03)</li><li>2 cups frozen spinach ($0.50)</li><li>Lime juice, salt, fresh cilantro</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Sauté onion in 3 tbsp vegetable broth until soft and golden, ~4 min.</li><li>Add garlic, curry powder, turmeric, cumin — stir 1 min until fragrant.</li><li>Pour in tomatoes and coconut milk. Stir well to combine all spices.</li><li>Add chickpeas. Bring to simmer. Cook 15–18 min, stirring occasionally.</li><li>Stir in frozen spinach. Cook 3 more minutes until wilted and incorporated.</li><li>Squeeze in lime, adjust salt. Serve over rice with fresh cilantro.</li></ol></div>
+      </div>
+      <div class="rnote">★ Coconut milk contains lauric acid — an antimicrobial fat that supports immune function. Pair turmeric with black pepper: piperine increases curcumin bioavailability by up to 2,000%.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Power Green Smoothie</h3><p>Under 2 minutes · micronutrient-dense · 100% plant-based · undetectable spinach</p></div><div class="rbadge">~$1.20/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>2 min</span></div><div class="rm">Serves: <span>1</span></div><div class="rm">Protein: <span>~8–12g</span></div><div class="rm">Difficulty: <span>Minimal</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>1 cup frozen spinach ($0.25)</li><li>1 frozen banana, chunked ($0.20)</li><li>½ cup frozen mango or berries ($0.30)</li><li>1 tbsp chia or ground flax ($0.12)</li><li>1 tbsp peanut butter ($0.18)</li><li>1–1½ cups oat milk or water ($0.18)</li><li>Pinch of cinnamon</li><li>Optional: 1 tsp spirulina powder</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Add liquid to blender first — this protects the blades and ensures smooth blending.</li><li>Add all other ingredients on top of liquid.</li><li>Blend high 45–60 seconds until completely smooth and creamy.</li><li>Taste — more banana for sweetness, more water for thinner consistency.</li><li>Drink immediately or seal and refrigerate up to 24 hours.</li><li>Prep hack: pre-freeze portioned bags. Morning = dump + blend in 45 seconds.</li></ol></div>
+      </div>
+      <div class="rnote">★ Frozen spinach is completely undetectable in taste when blended with fruit — but delivers iron, folate, vitamin K, and lutein that most adults are chronically deficient in without realizing it.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Black Bean & Sweet Potato Chili</h3><p>Deeply hearty · meal-prep king · anti-inflammatory · high fiber</p></div><div class="rbadge">~$1.40/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>35 min</span></div><div class="rm">Serves: <span>6</span></div><div class="rm">Protein: <span>~17g</span></div><div class="rm">Difficulty: <span>Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>2 cans black beans, drained ($1.60)</li><li>1 large sweet potato, diced ($0.70)</li><li>1 can diced tomatoes ($0.60)</li><li>1 can tomato paste ($0.45)</li><li>1 onion, diced ($0.25)</li><li>3 cloves garlic ($0.12)</li><li>1 tbsp chili powder ($0.06)</li><li>1 tsp cumin + ½ tsp smoked paprika</li><li>2 cups vegetable broth ($0.20)</li><li>Lime, fresh cilantro, hot sauce</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Sauté onion and garlic in 3 tbsp broth, 4–5 min until soft and golden.</li><li>Add chili powder, cumin, paprika — stir 1 min until deeply fragrant.</li><li>Add sweet potato, tomatoes, tomato paste, and broth. Stir well.</li><li>Bring to a boil. Reduce to medium-low. Simmer 15 min.</li><li>Add black beans. Simmer another 10 min until sweet potato is fork-tender and chili thickens.</li><li>Squeeze lime over top, adjust salt, serve with cilantro. Freezes perfectly for up to 3 months.</li></ol></div>
+      </div>
+      <div class="rnote">★ Sweet potato's beta-carotene converts to vitamin A — critical for immune function and eye health. Black beans deliver resistant starch that feeds beneficial gut bacteria for 12–24 hours post-meal.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Garlic White Bean & Greens Skillet</h3><p>10-minute wonder · iron-rich · Mediterranean · weeknight lifesaver</p></div><div class="rbadge">~$1.60/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>10 min</span></div><div class="rm">Serves: <span>2</span></div><div class="rm">Protein: <span>~19g</span></div><div class="rm">Difficulty: <span>Very Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>1 can white beans (cannellini), drained ($0.80)</li><li>2 cups frozen spinach or kale ($0.55)</li><li>4 cloves garlic, thinly sliced ($0.15)</li><li>½ cup cherry tomatoes, halved ($0.38)</li><li>¼ tsp chili flakes ($0.02)</li><li>Juice of ½ lemon ($0.12)</li><li>3 tbsp vegetable broth ($0.05)</li><li>Salt, black pepper, fresh parsley</li><li>Crusty bread or cooked grain to serve</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Heat a wide skillet over medium. Add broth and garlic slices — cook 1–2 min until just golden and fragrant. Watch closely — garlic turns fast.</li><li>Add chili flakes and cherry tomatoes. Cook 2 min until tomatoes soften slightly.</li><li>Add frozen greens directly from bag. Stir and cover 2 min to thaw and wilt.</li><li>Add white beans. Stir gently — keep beans mostly whole for texture.</li><li>Cook 2–3 min until everything is warmed through and flavors meld.</li><li>Squeeze lemon generously. Season with salt and pepper. Top with parsley.</li></ol></div>
+      </div>
+      <div class="rnote">★ White beans are one of the highest-iron plant foods available. Combining with lemon (vitamin C) in the same pan increases non-heme iron absorption by up to 3×. This is intentional, science-backed pairing.</div>
+    </div>
+
+    <div class="card rcard">
+      <div class="rtop"><div><h3>Peanut Noodle Bowl</h3><p>Crowd-pleaser · 15 minutes · high satiety · pantry staple meal</p></div><div class="rbadge">~$1.90/srv</div></div>
+      <div class="rmeta"><div class="rm">Time: <span>15 min</span></div><div class="rm">Serves: <span>2</span></div><div class="rm">Protein: <span>~20g</span></div><div class="rm">Difficulty: <span>Easy</span></div></div>
+      <div class="rbody">
+        <div><p class="cl">Ingredients</p>
+        <ul class="il"><li>150g whole grain spaghetti or rice noodles ($0.40)</li><li>1 cup frozen edamame, thawed ($0.55)</li><li>1 cup shredded purple cabbage ($0.20)</li><li>1 large carrot, julienned or grated ($0.20)</li><li>2 tbsp peanut butter ($0.36)</li><li>1 tbsp tamari or soy sauce ($0.08)</li><li>1 tbsp lime juice ($0.12)</li><li>1 tsp fresh ginger, grated ($0.05)</li><li>1 tsp sesame oil or extra lime ($0.08)</li><li>Sesame seeds, green onion, chili flakes</li></ul></div>
+        <div><p class="cl">Directions</p>
+        <ol class="stl"><li>Cook noodles per package instructions. Reserve ¼ cup pasta water before draining.</li><li>Whisk peanut butter, tamari, lime juice, ginger, and 2–3 tbsp pasta water until smooth and saucy. Thin with more water if needed.</li><li>Thaw edamame: pour boiling water over for 2 min, drain.</li><li>Toss hot noodles with peanut sauce immediately — the heat helps coat evenly.</li><li>Add edamame, cabbage, and carrot. Toss again.</li><li>Top with sesame seeds, sliced green onion, and chili flakes. Serve warm or cold.</li></ol></div>
+      </div>
+      <div class="rnote">★ Edamame is a complete protein — one of the rare plant foods containing all 9 essential amino acids in adequate amounts. Peanut butter adds monounsaturated fat that supports cardiovascular health and sustained energy release.</div>
+    </div>
+
+  </div>
+</section>
+<section id="science" class="sec">
+  <p class="eyebrow">Why It Works</p>
+  <h2 class="sec-title">The science<br><em>behind the food.</em></h2>
+  <p class="intro">This isn't about trends, willpower, or restriction. It's about understanding how food communicates with your nervous system, microbiome, hormones, and cellular biology — and using that knowledge strategically.</p>
+
+  <div class="scigrid">
+    <div class="card scicard"><h3>The Gut-Brain Axis & Mood</h3><p>Approximately 70% of the body's serotonin is produced in the gut — not the brain. The specific bacteria responsible for this serotonin synthesis are fed almost exclusively by prebiotic fiber: found in oats, beans, lentils, and vegetables. A fiber-depleted diet doesn't just harm digestion — it starves the microbiome responsible for mood regulation, stress resilience, and cognitive function. This is not metaphor. This is current neuroscience.</p><p class="src">SOURCE: Cell, 2019 · Nature Reviews Neuroscience, 2020 · Gut, 2021</p></div>
+    <div class="card scicard"><h3>Cortisol, Stress & Food Choices</h3><p>Chronic workplace stress elevates cortisol persistently, which drives cravings for high-fat, high-sugar foods, impairs gut motility, disrupts sleep architecture, accelerates cellular aging, and depletes the prefrontal cortex's capacity for decision-making. Oat beta-glucan has been shown in randomized controlled trials to measurably blunt the cortisol stress response. Regular polyphenol consumption — from berries, spinach, walnuts, and legumes — downregulates inflammatory markers directly associated with workplace burnout.</p><p class="src">SOURCE: Psychoneuroendocrinology, 2019 · Nutrients, 2020 · Frontiers in Nutrition, 2022</p></div>
+    <div class="card scicard"><h3>Blood Sugar Stability = Sustained Performance</h3><p>Ultra-processed foods and refined carbohydrates cause rapid glucose spikes followed by sharp crashes — that 2pm slump is dietary, not inevitable. The resistant starch and soluble fiber in whole plant foods create a slow, steady glucose release that sustains cognitive energy across the full workday. Studies show employees eating high-fiber plant-based lunches report significantly better afternoon focus and decision quality compared to refined carbohydrate meals.</p><p class="src">SOURCE: American Journal of Clinical Nutrition, 2018 · British Journal of Nutrition, 2021</p></div>
+    <div class="card scicard"><h3>Frozen Vegetables: Often Nutritionally Superior</h3><p>University of California Davis research demonstrated frozen broccoli retained twice the vitamin C content of fresh broccoli from a grocery store — because fresh produce loses nutrients during the 4–7 day journey from field to shelf. Flash-freezing within hours of harvest locks nutrients in place. The assumption that "fresh is always better" is scientifically inaccurate. Buy frozen without hesitation or guilt.</p><p class="src">SOURCE: University of California Davis, Journal of Food Composition & Analysis, 2017</p></div>
+    <div class="card scicard"><h3>Plant Protein & Longevity</h3><p>The world's most studied longevity populations — in Sardinia, Okinawa, Nicoya, Loma Linda, and Ikaria — share one consistent dietary pattern: predominantly plant-forward eating with legumes consumed daily. Researcher Dan Buettner's Blue Zones analysis of over 150 dietary studies identified beans as the single most consistent dietary predictor of lifespan across all cultures studied. Not olive oil. Not red wine. Beans. Consumed daily.</p><p class="src">SOURCE: Blue Zones research, Buettner · American Journal of Clinical Nutrition, 2019 · JAMA Internal Medicine, 2020</p></div>
+    <div class="card scicard"><h3>The True Cost of "Cheap" Food</h3><p>Harvard School of Public Health research found that the healthiest dietary patterns cost approximately $1.50 more per day than the least healthy — roughly $550 per year. The annual U.S. healthcare cost of diet-related chronic disease exceeds $1.1 trillion. Obesity, Type 2 diabetes, cardiovascular disease — all significantly preventable through consistent dietary choices — are the most expensive conditions affecting the American workforce. The ultra-processed "cheap" food is the most expensive food ever consumed.</p><p class="src">SOURCE: BMJ Open, Harvard T.H. Chan School of Public Health, 2013 · JAMA, 2019</p></div>
+    <div class="card scicard"><h3>Chronic Inflammation: The Root Mechanism</h3><p>Chronic low-grade inflammation is now recognized as the central mechanism underlying most chronic diseases — including depression, cardiovascular disease, Type 2 diabetes, Alzheimer's, and several cancers. Ultra-processed foods, excess added sugar, and low dietary fiber all drive inflammatory signaling pathways. Whole plant foods — particularly dark leafy greens, legumes, berries, and walnuts — are among the most potent anti-inflammatory foods identified in nutritional science. This is prevention, not treatment.</p><p class="src">SOURCE: Nature Medicine, 2021 · Cell Metabolism, 2020 · Annual Review of Nutrition, 2022</p></div>
+  </div>
+
+  <div class="nsbox">
+    <h3>🧠 Food as Nervous System Medicine</h3>
+    <p>The food choices we make are not merely about weight, energy, or aesthetics. They are direct inputs into the autonomic nervous system — the biological system that governs whether we feel safe, regulated, connected, and resilient, or stressed, reactive, depleted, and disconnected. <span class="nsh">Polyvagal theory</span> teaches us that the ventral vagal state — our state of calm presence, creativity, social connection, and focused work — requires a physiologically regulated body. You cannot sustainably regulate your nervous system on a diet of ultra-processed food, chronic blood sugar dysregulation, and a depleted gut microbiome. <span class="nsh">Food is not separate from wellness. Food is nervous system medicine.</span> Every whole-food, plant-based meal is a concrete, measurable choice to support your body's capacity to feel well, think clearly, and be fully present in your life and work.</p>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="sec">
+  <p class="eyebrow">Blue Zones Longevity Assessment</p>
+  <h2 class="sec-title">How long will<br><em>your diet let you live?</em></h2>
+  <p class="intro">Based on decades of Blue Zones research from the world's longest-lived populations — Okinawa, Sardinia, Nicoya, Ikaria, and Loma Linda. Answer honestly. No one is watching.</p>
+
+  <div class="quiz-wrap">
+    <div class="qprogbar"><div class="qprogfill" id="qprog" style="width:0%"></div></div>
+
+    <!-- Q1 -->
+    <div class="qcard" id="qc1">
+      <div class="qnum">Question 1 of 10</div>
+      <div class="qtext">How many servings of legumes (beans, lentils, chickpeas) do you eat each week?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="1" data-v="0" onclick="answer(this)">I rarely or never eat legumes</div>
+        <div class="qopt" data-q="1" data-v="1" onclick="answer(this)">1–2 times per week</div>
+        <div class="qopt" data-q="1" data-v="3" onclick="answer(this)">3–4 times per week</div>
+        <div class="qopt" data-q="1" data-v="4" onclick="answer(this)">Daily — they're a foundation of my diet</div>
+      </div>
+      <div class="qfeedback" id="qf1">🫘 <strong>Blue Zones verdict:</strong> Beans are the single most consistent dietary predictor of longevity across all five Blue Zones — more than olive oil, wine, or any supplement. Okinawans eat tofu and edamame daily. Nicoyans consume black beans at nearly every meal. Dan Buettner's analysis of 150+ studies identified legumes as the #1 food for a long life.</div>
+      <button class="qnext" id="qn1" onclick="nextQ(2)">Next →</button>
+    </div>
+
+    <!-- Q2 -->
+    <div class="qcard" id="qc2" style="display:none">
+      <div class="qnum">Question 2 of 10</div>
+      <div class="qtext">What best describes your daily vegetable intake?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="2" data-v="4" onclick="answer(this)">5+ servings — vegetables dominate most of my meals</div>
+        <div class="qopt" data-q="2" data-v="0" onclick="answer(this)">I mostly skip vegetables or eat them rarely</div>
+        <div class="qopt" data-q="2" data-v="1" onclick="answer(this)">1–2 small servings most days</div>
+        <div class="qopt" data-q="2" data-v="3" onclick="answer(this)">3–4 servings most days</div>
+      </div>
+      <div class="qfeedback" id="qf2">🥬 <strong>Blue Zones verdict:</strong> All five Blue Zones populations eat vegetables at nearly every meal. Ikarian Greeks are particularly notable — their diet is 60–70% plant-based year-round. Dark leafy greens specifically (spinach, kale, wild greens) appear in longevity research as one of the strongest predictors of reduced dementia risk.</div>
+      <button class="qnext" id="qn2" onclick="nextQ(3)">Next →</button>
+    </div>
+
+    <!-- Q3 -->
+    <div class="qcard" id="qc3" style="display:none">
+      <div class="qnum">Question 3 of 10</div>
+      <div class="qtext">How much ultra-processed food (chips, fast food, packaged snacks, frozen meals) do you eat?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="3" data-v="1" onclick="answer(this)">Several times a day — it's most of what I eat</div>
+        <div class="qopt" data-q="3" data-v="4" onclick="answer(this)">Rarely — I cook whole foods most of the time</div>
+        <div class="qopt" data-q="3" data-v="2" onclick="answer(this)">A few times a week</div>
+        <div class="qopt" data-q="3" data-v="3" onclick="answer(this)">Occasionally — once a week or less</div>
+      </div>
+      <div class="qfeedback" id="qf3">🚨 <strong>Blue Zones verdict:</strong> Ultra-processed food did not exist in any Blue Zone. A 2019 JAMA study tracking 44,000 adults found that a 10% increase in ultra-processed food consumption was associated with a 14% higher all-cause mortality risk. These products are engineered to override satiety signals — they are not neutral food.</div>
+      <button class="qnext" id="qn3" onclick="nextQ(4)">Next →</button>
+    </div>
+
+    <!-- Q4 -->
+    <div class="qcard" id="qc4" style="display:none">
+      <div class="qnum">Question 4 of 10</div>
+      <div class="qtext">How often do you eat nuts or seeds?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="4" data-v="3" onclick="answer(this)">A small handful most days</div>
+        <div class="qopt" data-q="4" data-v="4" onclick="answer(this)">Daily — I snack on or cook with them regularly</div>
+        <div class="qopt" data-q="4" data-v="0" onclick="answer(this)">Rarely or never</div>
+        <div class="qopt" data-q="4" data-v="1" onclick="answer(this)">Once or twice a week</div>
+      </div>
+      <div class="qfeedback" id="qf4">🌰 <strong>Blue Zones verdict:</strong> Seventh-day Adventists in Loma Linda who eat nuts 5+ times per week live an average of 2.5 extra years compared to non-nut eaters in the same community. Walnuts specifically reduce LDL cholesterol and contain alpha-linolenic acid — a plant-based omega-3 associated with reduced cardiovascular mortality.</div>
+      <button class="qnext" id="qn4" onclick="nextQ(5)">Next →</button>
+    </div>
+
+    <!-- Q5 -->
+    <div class="qcard" id="qc5" style="display:none">
+      <div class="qnum">Question 5 of 10</div>
+      <div class="qtext">What do you typically drink throughout the day?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="5" data-v="0" onclick="answer(this)">Mostly soda, energy drinks, or sweetened beverages</div>
+        <div class="qopt" data-q="5" data-v="4" onclick="answer(this)">Mostly water, herbal teas, and green tea</div>
+        <div class="qopt" data-q="5" data-v="2" onclick="answer(this)">Mostly coffee with sugar and flavored syrups</div>
+        <div class="qopt" data-q="5" data-v="3" onclick="answer(this)">Water and coffee — mostly unsweetened</div>
+      </div>
+      <div class="qfeedback" id="qf5">🍵 <strong>Blue Zones verdict:</strong> Okinawans drink jasmine green tea all day long — its catechins and EGCG are among the most studied anti-aging compounds. Sardinians drink Cannonau red wine (high in polyphenols) in moderation. All Blue Zones populations drink predominantly water. Sweetened beverages appear in none of the longevity data.</div>
+      <button class="qnext" id="qn5" onclick="nextQ(6)">Next →</button>
+    </div>
+
+    <!-- Q6 -->
+    <div class="qcard" id="qc6" style="display:none">
+      <div class="qnum">Question 6 of 10</div>
+      <div class="qtext">How much whole grain (oats, brown rice, quinoa, whole wheat) do you eat versus refined grains (white bread, white rice, white pasta)?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="6" data-v="3" onclick="answer(this)">Mostly whole grains — I make a conscious effort</div>
+        <div class="qopt" data-q="6" data-v="1" onclick="answer(this)">Mostly refined — white bread, white rice are staples</div>
+        <div class="qopt" data-q="6" data-v="0" onclick="answer(this)">Almost entirely refined — I rarely eat whole grains</div>
+        <div class="qopt" data-q="6" data-v="4" onclick="answer(this)">Almost entirely whole grains — refined grains are the exception</div>
+      </div>
+      <div class="qfeedback" id="qf6">🌾 <strong>Blue Zones verdict:</strong> Nicoyans eat handmade corn tortillas (whole grain, nixtamalized) three times daily. Okinawans eat sweet potatoes — not white rice — as their primary carbohydrate. Whole grains' fiber and resistant starch feed the gut microbiome, stabilize blood sugar, and reduce all-cause mortality by 16–22% in major longitudinal studies.</div>
+      <button class="qnext" id="qn6" onclick="nextQ(7)">Next →</button>
+    </div>
+
+    <!-- Q7 -->
+    <div class="qcard" id="qc7" style="display:none">
+      <div class="qnum">Question 7 of 10</div>
+      <div class="qtext">How often do you eat until you're completely full (or past full)?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="7" data-v="2" onclick="answer(this)">Sometimes — about half my meals</div>
+        <div class="qopt" data-q="7" data-v="4" onclick="answer(this)">Rarely — I usually stop when I'm about 80% full</div>
+        <div class="qopt" data-q="7" data-v="1" onclick="answer(this)">Often — most meals end when I can't eat more</div>
+        <div class="qopt" data-q="7" data-v="0" onclick="answer(this)">Almost always — I eat until very full or stuffed</div>
+      </div>
+      <div class="qfeedback" id="qf7">🍚 <strong>Blue Zones verdict:</strong> Okinawans follow the Confucian practice of <em>Hara Hachi Bu</em> — eating until 80% full, then stopping. This single habit creates a consistent ~20% caloric reduction without any dieting, reduces oxidative stress, lowers IGF-1 (a hormone linked to accelerated aging), and is directly associated with their exceptional rate of centenarians.</div>
+      <button class="qnext" id="qn7" onclick="nextQ(8)">Next →</button>
+    </div>
+
+    <!-- Q8 -->
+    <div class="qcard" id="qc8" style="display:none">
+      <div class="qnum">Question 8 of 10</div>
+      <div class="qtext">How much added sugar do you consume daily (sodas, desserts, sweet snacks, sweetened sauces)?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="8" data-v="4" onclick="answer(this)">Very little — I get sweetness from whole fruit</div>
+        <div class="qopt" data-q="8" data-v="0" onclick="answer(this)">A lot — sweets and sugary drinks are daily staples</div>
+        <div class="qopt" data-q="8" data-v="3" onclick="answer(this)">Minimal — an occasional treat, not a daily habit</div>
+        <div class="qopt" data-q="8" data-v="1" onclick="answer(this)">Quite a bit — most days include multiple sweet items</div>
+      </div>
+      <div class="qfeedback" id="qf8">🍬 <strong>Blue Zones verdict:</strong> Blue Zones populations consume roughly 1/5th the added sugar of the average American. When Sardinians eat sweets, it's for celebrations — not daily habit. Excess sugar drives chronic inflammation, accelerates cellular aging via glycation, disrupts the gut microbiome, and is the primary driver of metabolic syndrome — a cluster of conditions that accelerates biological aging by 5–10 years.</div>
+      <button class="qnext" id="qn8" onclick="nextQ(9)">Next →</button>
+    </div>
+
+    <!-- Q9 -->
+    <div class="qcard" id="qc9" style="display:none">
+      <div class="qnum">Question 9 of 10</div>
+      <div class="qtext">How many meals per week do you cook at home from whole ingredients versus ordering out or eating processed convenience food?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="9" data-v="1" onclick="answer(this)">0–3 home-cooked — most meals come from restaurants or packages</div>
+        <div class="qopt" data-q="9" data-v="4" onclick="answer(this)">14–21 — almost everything is home-cooked from whole foods</div>
+        <div class="qopt" data-q="9" data-v="2" onclick="answer(this)">4–7 — roughly half home-cooked, half out or packaged</div>
+        <div class="qopt" data-q="9" data-v="3" onclick="answer(this)">8–13 — mostly home-cooked with some takeout</div>
+      </div>
+      <div class="qfeedback" id="qf9">🍳 <strong>Blue Zones verdict:</strong> Home cooking is the invisible architecture of every Blue Zone. It's not just about ingredients — it's about pace, intentionality, and community. Eating together, slowly, at a table, without screens is itself a longevity behavior. Restaurant and packaged food, even when "healthy-labeled," contains 2–3× more sodium, sugar, and refined oils than home-cooked equivalents.</div>
+      <button class="qnext" id="qn9" onclick="nextQ(10)">Next →</button>
+    </div>
+
+    <!-- Q10 -->
+    <div class="qcard" id="qc10" style="display:none">
+      <div class="qnum">Question 10 of 10</div>
+      <div class="qtext">Which statement best describes your relationship with food overall?</div>
+      <div class="qopts">
+        <div class="qopt" data-q="10" data-v="3" onclick="answer(this)">Food is medicine — I think about how what I eat affects how I feel</div>
+        <div class="qopt" data-q="10" data-v="1" onclick="answer(this)">Food is fuel — I eat mostly out of convenience without thinking much about it</div>
+        <div class="qopt" data-q="10" data-v="0" onclick="answer(this)">Food is stress — I eat reactively, emotionally, or inconsistently</div>
+        <div class="qopt" data-q="10" data-v="4" onclick="answer(this)">Food is connection — I cook mindfully and eat with intention and enjoyment</div>
+      </div>
+      <div class="qfeedback" id="qf10">🌿 <strong>Blue Zones verdict:</strong> In every Blue Zone, food is social, intentional, and celebrated. Okinawans have <em>moai</em> — lifelong social groups that eat together. Sardinians share meals across generations. The relationship with food — the mindset, the ritual, the community — is inseparable from the food itself in longevity science. Eating alone, quickly, and joylessly is a measurable health risk.</div>
+      <button class="qnext" id="qn10" onclick="showLeadCapture()">See My Results →</button>
+    </div>
+
+    <!-- LEAD CAPTURE -->
+    <div class="qlead" id="qlead">
+      <div style="font-size:48px;margin-bottom:16px">🔮</div>
+      <h3>Your longevity score is ready.</h3>
+      <p>Enter your name and email to receive your personalized Blue Zones assessment — plus practical next steps based on your results.</p>
+      <div class="qform">
+        <input class="qinput" id="qfirst" type="text" placeholder="First name" />
+        <input class="qinput" id="qlast" type="text" placeholder="Last name" />
+        <input class="qinput" id="qemail" type="email" placeholder="Your email address" />
+        <button class="qsubmit" onclick="submitResults()">Reveal My Results ✨</button>
+        <p class="qprivacy">Your information is private and will never be shared or sold. You may receive occasional wellness insights from Catarina — unsubscribe anytime.</p>
+      </div>
+      <div id="qsubmsg" style="display:none;margin-top:16px;font-size:13.5px;color:var(--green-pale)"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="qresult" id="qresult">
+      <div class="qresult-hero">
+        <div class="qage-label">Your Projected Longevity Age</div>
+        <div class="qage" id="res-age"></div>
+        <div class="qgrade" id="res-grade"></div>
+        <p class="qsummary" id="res-summary"></p>
+      </div>
+      <div class="qbreakdown" id="res-breakdown"></div>
+      <div class="qcta">
+        <h4>Ready to add years to your life?</h4>
+        <p>Catarina works with individuals and groups to build sustainable, science-backed food and wellness practices — rooted in nervous system regulation and Blue Zones principles. Sessions available in Baltimore and DC, and virtually.</p>
+        <a href="https://www.catarinahenriques.com" target="_blank" style="display:inline-block;background:var(--green);color:var(--forest);border-radius:8px;padding:12px 28px;font-family:'Jost',sans-serif;font-size:14px;font-weight:700;text-decoration:none;margin-bottom:12px">Work with Catarina →</a><br>
+        <button class="qretake" onclick="retakeQuiz()">↺ Retake the quiz</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT (tab section, minimal) -->
+<section id="about" class="sec">
+  <p class="eyebrow">Your Guide</p>
+  <h2 class="sec-title">Meet <em>Catarina.</em></h2>
+  <p class="intro">This guide was created by Catarina De Sousa Henriques — wellness educator, somatic practitioner, and founder of The Hall of SELF in Baltimore. Everything here is rooted in science, guided by compassion, and designed for real human lives.</p>
+</section>
+
+<!-- ABOUT FULL WIDTH -->
+<div class="about-wrap" id="awrap" style="display:none">
+  <div class="about-in">
+    <div>
+      <div class="atitle">Wellness Educator · Somatic Practitioner · Founder</div>
+      <div class="aname">Catarina De Sousa <em>Henriques</em></div>
+      <p class="abio">Catarina is the founder of The Hall of SELF — a longevity-focused wellness studio in Baltimore's Canton neighborhood — and runs a private practice in Dupont Circle, DC, offering 1:1, couples, and small group sessions.</p>
+      <p class="abio">With a background in psychology and deep expertise in somatic practices, polyvagal theory, and trauma-informed approaches, Catarina bridges rigorous science with accessible, embodied wellness. Her work spans yoga, breathwork, Pilates, sound healing, cacao ceremonies, and nervous system regulation.</p>
+      <p class="abio">All content she creates — including this guide — reflects a whole-food, plant-based lens. No animal products of any kind.</p>
+      <div class="alinks">
+        <a href="https://catarinahenriques.com" target="_blank" class="alink aw">
+          <div class="ai">🌿</div>
+          <div><strong>catarinahenriques.com</strong><small>Workshops · private sessions · The Sacred Minimum™</small></div>
+        </a>
+        <a href="https://www.instagram.com/catarinadesousahenriques" target="_blank" class="alink aig">
+          <div class="ai">📷</div>
+          <div><strong>@catarinadesousahenriques</strong><small>Daily wellness content · nervous system · nourishment</small></div>
+        </a>
+        <a href="https://www.linkedin.com/in/catarina-henriques-78539451/" target="_blank" class="alink ali">
+          <div class="ai">💼</div>
+          <div><strong>LinkedIn</strong><small>Professional background · collaborations · curriculum</small></div>
+        </a>
+      </div>
+    </div>
+    <div class="ar">
+      <h3>The Philosophy Behind This Guide</h3>
+      <p>This resource was created to offer practical, evidence-based nutritional tools that fit into real, busy, budget-conscious lives.</p>
+      <p>The philosophy here isn't about perfection, expensive superfoods, or elaborate meal plans. It's about building what Catarina calls <strong style="color:var(--green-soft)">The Sacred Minimum™</strong> — the smallest sustainable practices that, done consistently, create profound change over time.</p>
+      <p>Every recipe, swap, tip, and science note in this guide reflects a core belief: <strong style="color:var(--cream)">your health is your greatest asset, and you deserve access to the tools to protect it — regardless of your budget, your schedule, or where you're starting from.</strong></p>
+      <div class="aq">"The smallest sustainable practice,<br>done consistently,<br>changes everything."<span class="aqsig">— Catarina De Sousa Henriques</span></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© <a href="https://www.catarinahenriques.com" target="_blank" style="color:rgba(244,237,218,.5);text-decoration:none;border-bottom:1px solid rgba(244,237,218,.2);padding-bottom:1px;transition:color .2s" onmouseover="this.style.color='rgba(244,237,218,.8)'" onmouseout="this.style.color='rgba(244,237,218,.5)'">CATARINA DE SOUSA HENRIQUES</a> · 100% PLANT-BASED</p>
+</footer>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  document.getElementById('awrap').style.display = id==='about' ? 'block' : 'none';
+  window.scrollTo({top:document.querySelector('.nav').offsetTop,behavior:'smooth'});
+}
+
+function pick(el) {
+  const g = el.dataset.g;
+  // flavor, meal, and servings stay single-select; all others are multi-select
+  if (g === 'flavor' || g === 'meal' || g === 'servings') {
+    document.querySelectorAll(`.bopt[data-g="${g}"]`).forEach(o=>o.classList.remove('sel'));
+    el.classList.add('sel');
+  } else {
+    el.classList.toggle('sel');
+  }
+}
+
+function resetBuild() {
+  document.querySelectorAll('.bopt').forEach(o=>o.classList.remove('sel'));
+  document.getElementById('bout').classList.remove('show');
+}
+
+const flavors = {
+  'Mediterranean':{sauce:'tahini-lemon dressing (2 tbsp tahini + lemon juice + 1 garlic clove + water + salt)',spices:'dried oregano, smoked paprika, za\'atar',extras:['Fresh parsley or mint','Cherry tomatoes','Kalamata olives (optional)']},
+  'Mexican-Inspired':{sauce:'lime-cumin vinaigrette or fresh salsa',spices:'cumin, chili powder, smoked paprika',extras:['Sliced avocado','Fresh lime juice','Cilantro']},
+  'Asian-Inspired':{sauce:'tamari-ginger sauce (2 tbsp tamari + 1 tsp fresh ginger + 1 tsp sesame + rice vinegar)',spices:'ginger, five-spice, garlic',extras:['Sesame seeds','Sliced green onion']},
+  'Indian-Spiced':{sauce:'coconut milk curry sauce (coconut milk + curry powder + garlic)',spices:'turmeric, cumin, coriander, garam masala',extras:['Fresh cilantro','Squeeze of lime','Pinch of black pepper (boosts turmeric absorption 2000%)']},
+  'Simple & Herby':{sauce:'lemon-herb drizzle (lemon juice + olive oil or broth + fresh herbs)',spices:'rosemary, thyme, basil, garlic',extras:['Sun-dried tomatoes','Capers','Fresh basil']},
+  'Smoky & Bold':{sauce:'smoky chipotle-tomato sauce (tomato paste + chipotle + smoked paprika + cumin)',spices:'smoked paprika, chipotle, cumin, garlic',extras:['Roasted corn','Pickled red onion']},
+  'Middle Eastern':{sauce:'lemon-tahini sauce with cumin and za\'atar',spices:'cumin, coriander, za\'atar, cinnamon',extras:['Fresh parsley','Pomegranate seeds (optional)','Pine nuts or sunflower seeds']},
+  'Thai-Inspired':{sauce:'peanut sauce (2 tbsp peanut butter + lime + tamari + ginger + water)',spices:'lemongrass, ginger, garlic, chili flakes',extras:['Fresh basil or mint','Lime wedge','Crushed peanuts or sunflower seeds']},
+};
+
+function buildMeal() {
+  const bases    = [...document.querySelectorAll('.bopt.sel[data-g="base"]')].map(e=>e.textContent);
+  const proteins = [...document.querySelectorAll('.bopt.sel[data-g="protein"]')].map(e=>e.textContent);
+  const vegs     = [...document.querySelectorAll('.bopt.sel[data-g="veg"]')].map(e=>e.textContent);
+  const flavorEl = document.querySelector('.bopt.sel[data-g="flavor"]');
+  const mealEl   = document.querySelector('.bopt.sel[data-g="meal"]');
+  const servEl   = document.querySelector('.bopt.sel[data-g="servings"]');
+  const flavor   = flavorEl?.textContent;
+  const meal     = mealEl?.textContent || 'any time';
+  const servings = servEl ? parseInt(servEl.textContent) : 1;
+
+  if (!bases.length || !proteins.length || !vegs.length || !flavor) {
+    alert('Please select at least one base, one protein, one vegetable, and a flavor direction.');
+    return;
+  }
+
+  const f = flavors[flavor];
+  const isTaco  = bases.includes('Corn Tortillas');
+  const isSalad = bases.includes('Mixed Greens') && bases.length === 1;
+  const frozenVegs = vegs.filter(v => ['Frozen Spinach','Broccoli','Kale'].includes(v));
+  const freshVegs  = vegs.filter(v => !['Frozen Spinach','Broccoli','Kale'].includes(v));
+
+  const baseLabel = bases.length === 1 ? bases[0] : bases.slice(0,-1).join(', ') + ' & ' + bases.at(-1);
+  const protLabel = proteins.length === 1 ? proteins[0] : proteins.slice(0,-1).join(', ') + ' & ' + proteins.at(-1);
+  const vegLabel  = vegs.length === 1 ? vegs[0] : vegs.slice(0,-1).join(', ') + ' & ' + vegs.at(-1);
+
+  // Scaling helper — turns a base quantity into a scaled readable fraction
+  function scale(num, unit) {
+    const v = num * servings;
+    if (unit === 'cup') {
+      if (v < 0.25) return `¼ cup`;
+      if (v === 0.25) return `¼ cup`;
+      if (v === 0.5)  return `½ cup`;
+      if (v === 0.75) return `¾ cup`;
+      if (v % 1 === 0) return `${v} cups`;
+      return `${Math.round(v * 4) / 4} cups`;
+    }
+    if (unit === 'can') return v === 1 ? `1 can` : `${v} cans`;
+    if (unit === 'tbsp') return v <= 1 ? `${v} tbsp` : `${v} tbsp`;
+    if (unit === 'tortillas') return `${4 * servings} tortillas`;
+    return `${v}`;
+  }
+
+  const title = `${flavor} ${isTaco ? 'Tacos' : isSalad ? 'Salad' : 'Bowl'} — ${protLabel} with ${vegLabel}${servings > 1 ? ` · ${servings} servings` : ''}`;
+
+  const ingredients = [
+    ...bases.map(b => {
+      if (b === 'Corn Tortillas') return `Corn Tortillas — ${scale(null,'tortillas')}`;
+      if (b === 'Mixed Greens')   return `Mixed Greens — ${servings === 1 ? '2 large handfuls' : `${servings * 2} handfuls`}`;
+      return `${b} — ${scale(0.5,'cup')} cooked`;
+    }),
+    ...proteins.map(p => `${p} — ${scale(0.5,'can')} or ${scale(0.5,'cup')} cooked, seasoned`),
+    ...vegs.map(v => {
+      const isFrz = ['Frozen Spinach','Broccoli','Kale'].includes(v);
+      return `${v} — ${scale(1,'cup')}${isFrz ? ', thawed or microwaved' : ', prepared'}`;
+    }),
+    `Sauce: ${f.sauce}${servings > 2 ? ' (double or triple batch)' : ''}`,
+    `Spices: ${f.spices}`,
+    ...f.extras,
+    `Salt, pepper, fresh lemon or lime to finish`
+  ];
+
+  const steps = [];
+  if (frozenVegs.length) steps.push(`Warm ${frozenVegs.join(' and ')} in a pan with a splash of broth, or microwave 2–3 min. Season lightly.`);
+  if (freshVegs.length)  steps.push(`Prep ${freshVegs.join(' and ')}: slice, shred, or use as-is.`);
+  steps.push(`Season ${protLabel.toLowerCase()} with ${f.spices}. Warm in a dry pan 2–3 min, or use directly from can, rinsed and drained.`);
+  steps.push(`Make your sauce: ${f.sauce}. Whisk until smooth. Taste and adjust.${servings > 2 ? ' Scale up sauce proportionally.' : ''}`);
+  if (isTaco) steps.push(`Warm tortillas on a dry skillet or over a gas flame, 30 sec per side until slightly charred. Work in batches if needed.`);
+  else steps.push(`${servings > 2 ? `Divide ${baseLabel.toLowerCase()} across ${servings} wide bowls` : `Layer your base${bases.length > 1 ? 's' : ''} — ${baseLabel.toLowerCase()} — into a wide bowl`}.`);
+  steps.push(`Add proteins and vegetables. Top with extras: ${f.extras.join(', ')}.`);
+  steps.push(`Drizzle sauce generously. Finish with lemon or lime. ${meal === 'Meal Prep' ? `Pack each of the ${servings} portions with sauce separately.` : 'Serve immediately and enjoy.'}`);
+
+  const estCost = (1.80 + (proteins.length - 1) * 0.60 + (bases.length - 1) * 0.30) * servings;
+  const estProtein = (18 + (proteins.length - 1) * 6) * servings;
+
+  const tip = meal === 'Meal Prep'
+    ? `💡 Meal prep tip: This makes ${servings} portion${servings > 1 ? 's' : ''} — stores well 3–4 days. Keep sauce in a separate container and add fresh before eating.${isSalad ? ' Add greens day-of.' : ''}`
+    : meal === 'Desk Lunch' || meal === 'On the Go'
+    ? `💡 Pack in ${servings === 1 ? 'a wide-mouth jar' : `${servings} containers`}. Most components work cold — no reheating needed.`
+    : `💡 With ${proteins.length > 1 ? 'multiple protein sources' : protLabel} and ${bases.length > 1 ? 'layered bases' : baseLabel.toLowerCase()}, this is a nutritionally complete plant-based meal — all essential amino acids covered.`;
+
+  document.getElementById('otitle').textContent = title;
+  const ingEl = document.getElementById('oing');
+  ingEl.innerHTML = '';
+  ingredients.forEach(i=>{const li=document.createElement('li');li.textContent=i;ingEl.appendChild(li)});
+  const stepEl = document.getElementById('osteps');
+  stepEl.innerHTML = '';
+  steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;stepEl.appendChild(li)});
+  document.getElementById('otip').textContent = tip;
+  document.getElementById('ostats').innerHTML = [
+    {l:'Est. Cost',    v:`~$${estCost.toFixed(2)}`},
+    {l:'Servings',     v:`${servings}`},
+    {l:'Prep Time',    v: servings <= 2 ? '8–15 min' : '20–30 min'},
+    {l:'Est. Protein', v:`~${estProtein}g total`},
+    {l:'Plant-Based',  v:'100% ✓'},
+    {l:'Fiber',        v:'High ✓'},
+  ].map(s=>`<div class="ostat">${s.l}: <span>${s.v}</span></div>`).join('');
+
+  const b = document.getElementById('bout');
+  b.classList.add('show');
+  b.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// ── QUIZ ──────────────────────────────────────────────
+const qScores = {};
+
+function answer(el) {
+  const q = el.dataset.q;
+  const v = parseInt(el.dataset.v);
+  // Allow changing answer — just swap the chosen highlight, never lock
+  document.querySelectorAll(`.qopt[data-q="${q}"]`).forEach(o=>o.classList.remove('chosen'));
+  el.classList.add('chosen');
+  qScores[q] = v;
+  document.getElementById('qf'+q).style.display='block';
+  document.getElementById('qn'+q).style.display='inline-block';
+  updateProgress(parseInt(q));
+}
+
+function updateProgress(q) {
+  document.getElementById('qprog').style.width=(q/10*100)+'%';
+}
+
+function nextQ(n) {
+  document.getElementById('qc'+(n-1)).style.display='none';
+  if(n<=10){
+    const next=document.getElementById('qc'+n);
+    next.style.display='block';
+    next.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+function showLeadCapture() {
+  document.getElementById('qc10').style.display='none';
+  document.getElementById('qprog').style.width='100%';
+  const lc=document.getElementById('qlead');
+  lc.style.display='block';
+  lc.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function calcResults() {
+  const total=Object.values(qScores).reduce((a,b)=>a+b,0);
+  const pct=total/40;
+  const age=Math.round(72+pct*25);
+  let grade,summary;
+  if(pct>=0.88){grade='Blue Zone Level 🌿';summary='Your dietary patterns closely mirror those of Okinawa, Sardinia, and the Nicoya Peninsula. You eat like the world\'s longest-lived people. Keep this up consistently and your cells will thank you for decades.';}
+  else if(pct>=0.70){grade='Longevity-Forward 🌱';summary='You have strong foundations and clear awareness of what supports long life. A few targeted upgrades — particularly around legumes, processed food, and mindful eating — could meaningfully extend your projected healthspan.';}
+  else if(pct>=0.50){grade='Building Momentum 🔄';summary='You have some Blue Zone habits but significant room to grow. Your current diet is likely contributing to some chronic inflammation and energy instability. Even small, consistent shifts produce measurable biological change within weeks.';}
+  else if(pct>=0.30){grade='Early Opportunity ⚡';summary='Your current eating patterns carry real longevity risk. The encouraging truth from Blue Zones research: dietary habits changed in your 40s, 50s, and even 60s still produce substantial lifespan gains. You have time — and this guide gives you the tools.';}
+  else{grade='Time to Shift 🚨';summary='Your current diet significantly diverges from patterns associated with long, healthy life. The research is clear: the food choices in this guide are among the highest-leverage interventions for extending both lifespan and healthspan. Start with one change this week.';}
+
+  const areas=[
+    {label:'Legumes & Plant Protein',score:qScores[1],tip:qScores[1]<3?'Add beans or lentils to 3+ meals this week.':'Strong foundation — maintain daily legume intake.'},
+    {label:'Vegetables & Greens',score:qScores[2],tip:qScores[2]<3?'Aim for 1 cup dark leafy greens daily.':'Excellent — keep variety high.'},
+    {label:'Processed Food Avoidance',score:qScores[3],tip:qScores[3]<3?'Swap one processed snack per day for whole food.':'Well done — this protects your gut microbiome.'},
+    {label:'Nuts & Seeds',score:qScores[4],tip:qScores[4]<3?'Add a small handful of walnuts or seeds daily.':'Great habit — 2.5 extra years per Blue Zones data.'},
+    {label:'Hydration Quality',score:qScores[5],tip:qScores[5]<3?'Replace one sweetened drink with green tea or water.':'Optimal hydration supports every body system.'},
+    {label:'Whole vs Refined Grains',score:qScores[6],tip:qScores[6]<3?'Swap white rice for brown rice or quinoa this week.':'Your fiber intake is protecting your microbiome.'},
+    {label:'Mindful Eating (Hara Hachi Bu)',score:qScores[7],tip:qScores[7]<3?'Practice pausing halfway through each meal.':'Hara Hachi Bu mastered — Okinawan level.'},
+    {label:'Added Sugar',score:qScores[8],tip:qScores[8]<3?'Reduce sweetened beverages first — highest impact.':'Low sugar = low inflammation = slower aging.'},
+    {label:'Home Cooking',score:qScores[9],tip:qScores[9]<3?'Batch cook Sunday — 1 hour = 5 days of real meals.':'Home cooking is the foundation of every Blue Zone.'},
+    {label:'Food Relationship',score:qScores[10],tip:qScores[10]<3?'Eat one meal this week without screens, with presence.':'Mindful eating is a longevity behavior in itself.'},
+  ];
+  return{age,grade,summary,areas,total};
+}
+
+function submitResults() {
+  const first=document.getElementById('qfirst').value.trim();
+  const last=document.getElementById('qlast').value.trim();
+  const email=document.getElementById('qemail').value.trim();
+  const msg=document.getElementById('qsubmsg');
+  if(!first||!last||!email||!email.includes('@')){
+    msg.style.display='block';msg.style.color='rgba(196,96,58,.9)';
+    msg.textContent='Please enter your first name, last name, and a valid email to continue.';
+    return;
+  }
+  const name=`${first} ${last}`;
+  const r=calcResults();
+  const bodyText=
+    `Blue Zones Longevity Quiz Result\n\n`+
+    `Name: ${name}\nEmail: ${email}\n\n`+
+    `Projected Longevity Age: ${r.age}\nGrade: ${r.grade}\nScore: ${r.total}/40\n\n`+
+    `Area Scores:\n`+r.areas.map(a=>`  ${a.label}: ${a.score}/4`).join('\n')+
+    `\n\nSummary: ${r.summary}`;
+
+  const subject=`Blue Zones Quiz — ${name} scored ${r.total}/40 · Projected age ${r.age}`;
+  window.open(`mailto:info@catarinahenriques.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`);
+
+  msg.style.display='block';msg.style.color='var(--green-pale)';
+  msg.textContent='✓ Opening your email client to send results to Catarina...';
+  setTimeout(()=>showResults(r,name),1400);
+}
+
+function showResults(r,name) {
+  document.getElementById('qlead').style.display='none';
+  const res=document.getElementById('qresult');
+  res.style.display='block';
+  document.getElementById('res-age').textContent=r.age;
+  document.getElementById('res-grade').textContent=r.grade;
+  document.getElementById('res-summary').textContent=(name?name+', ':'')+r.summary;
+  document.getElementById('res-breakdown').innerHTML=r.areas.map(a=>{
+    const pct=(a.score/4)*100;
+    const color=pct>=75?'var(--green)':pct>=50?'var(--sand)':'rgba(196,96,58,.8)';
+    return`<div class="qbd"><div class="qbd-label">${a.label}</div><div style="height:6px;background:rgba(77,170,94,.1);border-radius:3px;margin:8px 0 6px;overflow:hidden"><div class="bbar" data-w="${pct}" style="height:100%;width:0%;background:${color};border-radius:3px;transition:width 1s ease"></div></div><div class="qbd-note">${a.tip}</div></div>`;
+  }).join('');
+  res.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>{document.querySelectorAll('.bbar').forEach(b=>{b.style.width=b.dataset.w+'%';});},200);
+}
+
+function retakeQuiz() {
+  Object.keys(qScores).forEach(k=>delete qScores[k]);
+  document.getElementById('qresult').style.display='none';
+  document.getElementById('qlead').style.display='none';
+  for(let i=1;i<=10;i++){
+    const c=document.getElementById('qc'+i);
+    c.style.display=i===1?'block':'none';
+    document.getElementById('qf'+i).style.display='none';
+    document.getElementById('qn'+i).style.display='none';
+    document.querySelectorAll(`.qopt[data-q="${i}"]`).forEach(o=>{o.style.pointerEvents='';o.classList.remove('chosen');});
+  }
+  document.getElementById('qprog').style.width='0%';
+  document.getElementById('qfirst').value='';
+  document.getElementById('qlast').value='';
+  document.getElementById('qemail').value='';
+  document.getElementById('qsubmsg').style.display='none';
+  document.querySelector('#quiz').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
