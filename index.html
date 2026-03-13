@@ -177,8 +177,8 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
 .qlead h3{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,32px);color:var(--cream);margin-bottom:10px}
 .qlead p{font-size:15px;color:var(--text-mid);line-height:1.75;max-width:480px;margin:0 auto 28px}
 .qform{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto}
-.qinput{background:var(--forest-2);border:1px solid rgba(77,170,94,.3);border-radius:8px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;color:var(--cream);outline:none;transition:border-color .2s}
-.qinput::placeholder{color:var(--text-dim)}
+.qinput{background:var(--forest-2);border:1px solid rgba(77,170,94,.3);border-radius:8px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;color:var(--cream);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;-webkit-text-fill-color:var(--cream);}
+.qinput::placeholder{color:var(--text-dim);-webkit-text-fill-color:rgba(244,237,218,.4)}
 .qinput:focus{border-color:var(--green)}
 .qsubmit{background:var(--sand);color:var(--forest);border:none;border-radius:8px;padding:15px;font-family:'Jost',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.04em}
 .qsubmit:hover{background:var(--sand-soft);transform:translateY(-1px)}
@@ -831,7 +831,7 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
 <div class="about-wrap" id="awrap" style="display:none">
   <div class="about-in">
     <div>
-      <div class="atitle">Wellness Educator · Somatic Practitioner · Founder</div>
+      <div class="atitle">Wellness Educator · Somatic Practitioner · Certified Integrative Nutrition Health Coach · Founder</div>
       <div class="aname">Catarina De Sousa <em>Henriques</em></div>
       <p class="abio">Catarina is the founder of The Hall of SELF — a longevity-focused wellness studio in Baltimore's Canton neighborhood — and runs a private practice in Dupont Circle, DC, offering 1:1, couples, and small group sessions.</p>
       <p class="abio">With a background in psychology and deep expertise in somatic practices, polyvagal theory, and trauma-informed approaches, Catarina bridges rigorous science with accessible, embodied wellness. Her work spans yoga, breathwork, Pilates, sound healing, cacao ceremonies, and nervous system regulation.</p>
@@ -839,11 +839,11 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
       <div class="alinks">
         <a href="https://catarinahenriques.com" target="_blank" class="alink aw">
           <div class="ai">🌿</div>
-          <div><strong>catarinahenriques.com</strong><small>Workshops · private sessions · The Sacred Minimum™</small></div>
+          <div><strong>catarinahenriques.com</strong><small>Workshops · private sessions · The Sacred Minimum™ · Prime SELF Mastery™</small></div>
         </a>
         <a href="https://www.instagram.com/catarinadesousahenriques" target="_blank" class="alink aig">
           <div class="ai">📷</div>
-          <div><strong>@catarinadesousahenriques</strong><small>Daily wellness content · nervous system · nourishment</small></div>
+          <div><strong>@catarinadesousahenriques</strong><small>Wellness content · nervous system · nourishment</small></div>
         </a>
         <a href="https://www.linkedin.com/in/catarina-henriques-78539451/" target="_blank" class="alink ali">
           <div class="ai">💼</div>
@@ -1079,18 +1079,14 @@ function submitResults() {
   }
   const name=`${first} ${last}`;
   const r=calcResults();
-  const bodyText=
-    `Blue Zones Longevity Quiz Result\n\n`+
-    `Name: ${name}\nEmail: ${email}\n\n`+
-    `Projected Longevity Age: ${r.age}\nGrade: ${r.grade}\nScore: ${r.total}/40\n\n`+
-    `Area Scores:\n`+r.areas.map(a=>`  ${a.label}: ${a.score}/4`).join('\n')+
-    `\n\nSummary: ${r.summary}`;
 
-  const subject=`Blue Zones Quiz — ${name} scored ${r.total}/40 · Projected age ${r.age}`;
+  // Privacy-first: email only contains name + contact, no quiz answers
+  const subject=`Blue Zones Quiz — New submission from ${name}`;
+  const bodyText=`Hi Catarina!\n\nThanks for this quiz! 🌿\n\n— ${name}\n${email}`;
   window.open(`mailto:info@catarinahenriques.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`);
 
   msg.style.display='block';msg.style.color='var(--green-pale)';
-  msg.textContent='✓ Opening your email client to send results to Catarina...';
+  msg.textContent='✓ Almost there — just hit Send in your email app to confirm.';
   setTimeout(()=>showResults(r,name),1400);
 }
 
